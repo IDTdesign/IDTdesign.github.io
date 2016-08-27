@@ -1,0 +1,76 @@
+@import (less) "./node_modules/normalize.css/normalize.css";
+@import (less) "./node_modules/bettertext.css/bettertext.less";
+
+.bettertext-settings() {
+
+    //settings
+    @fz: 16px;
+    @fz-small: 0.8em;
+    @rythm: 20px;
+    @linel: 50em;
+    @font-body: sans-serif;
+    @font-headers: sans-serif;
+    @scale1: 1.125;
+    @scale2: 1.250;
+    @section-pad: 5vw;
+    @bettertext-breakpoint: @screen-typography;
+
+    @lh: 1.4;
+    @m-default: 20px;
+}
+
+@import (less) "./node_modules/flxgrid.css/flxgrid.less";
+
+.grid-settings() {
+    @gutter-width: 40px;
+
+    // media breakpoints
+    @breakpoints:
+        @screen-xs,  //xs
+        @screen-sm,  //sm
+        @screen-md,  //md
+        @screen-lg, //lg
+        @screen-xlg; //xlg
+
+    // max-width of containers according breakpoints
+    @container-maw:
+        none,   //xxs→xs
+        none,   //xs→sm
+        960px,  //sm→md
+        1400px, //md→lg
+        1560px; //lg→xlg
+
+    // names for breakpoint suffixes
+    @suffixes: xxs, xs, sm, md, lg, xlg;
+}
+
+.container-fluid {
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+//our local components
+@import (less) "_links.less";
+//@import (less) "./uicomponents/buttons/buttons.less";
+//@import (less) "_highlight.less";
+//@import (less) "_github.less";
+@import (less) "_siteheader.less";
+@import (less) "_isotope.less";
+@import (less) "_sitefooter.less";
+
+* {
+    box-sizing: border-box;
+}
+
+
+//global vars
+
+//breakpoints
+@screen-xs: ~"min-width: 425px";   //xs
+@screen-sm: ~"min-width: 768px";   //sm
+@screen-md: ~"min-width: 960px";   //md
+@screen-lg: ~"min-width: 1440px";  //lg
+@screen-xlg: ~"min-width: 1600px"; //xlg
+
+@screen-typography: @screen-sm;

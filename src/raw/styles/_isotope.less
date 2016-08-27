@@ -1,0 +1,207 @@
+/* ---- button ---- */
+
+.filter-button {
+    display: inline-block;
+    margin: 0;
+    padding: 0.5em 1.25em;
+    border: 2px solid transparent;
+    border-radius: 1.5em;
+    color: #222;
+    background: transparent;
+    font-size: 14px;
+    line-height: 1.5;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-button:hover {
+    color: #F9593A;
+}
+
+.filter-button:active,
+.filter-button.is-checked {
+    color: #fff;
+    background-color: #F9593A;
+}
+
+.filter-button.is-checked {
+    color: #fff;
+    border-color: darken(#F9593A, 5%);
+}
+
+.filter-button:active {
+
+}
+
+/* ---- button-group ---- */
+
+.button-group {
+    border-radius: 1.5em;
+    box-shadow: inset 0 0 0 2px #eee;
+    padding-right: .5em;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .filter-button {
+        float: left;
+        margin-right: -.5em;
+    }
+}
+
+/* ui group */
+
+.ui-group {
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    &-title {
+        text-align: center;
+        font-size: 12px;
+        margin: 0 0 .5em;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: #ccc;
+    }
+}
+
+/* ---- isotope ---- */
+.isotope-filters {
+    display: none;
+
+    @media (@screen-sm) {
+        display: flex;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .isotope-filters-popup-close {
+        display: none;
+    }
+
+    &.isotope-filters-popup {
+        display: flex;
+        position: fixed;
+        z-index: 100;
+        left: 20px;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+        background: rgba(255,255,255,.95);
+        align-content: center;
+
+        @media (@screen-sm) {
+            display: flex;
+            position: static;
+            padding: 0;
+        }
+
+        .isotope-filters-popup-close {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            @media (@screen-sm) {
+                display: none;
+            }
+        }
+    }
+}
+
+.isotope-filters-trigger {
+
+    @media (@screen-sm) {
+        display: none;
+    }
+}
+
+.isotope-grid {
+    margin: 2em auto;
+    padding: 20px 0 0 20px;
+    max-width: none;
+    @media (@screen-sm) {
+        max-width: 350px * 2 + 20px * 3;
+    }
+    @media (@screen-md) {
+        max-width: 290px * 3 + 20px * 4;
+    }
+    @media (@screen-lg) {
+        max-width: 330px * 4 + 20px * 5;
+    }
+}
+
+/* clear fix */
+.isotope-grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* grid-item */
+
+.isotope-grid-sizer {
+    float: left;
+    width: ~"calc(100% - 40px)";
+    margin: 0 20px 20px 0;
+
+    @media (@screen-sm) {
+        width: 350px;
+    }
+    @media (@screen-md) {
+        width: 290px;
+    }
+    @media (@screen-lg) {
+        width: 330px;
+    }
+}
+
+.isotope-grid-item {
+    width: ~"calc(100% - 40px)";
+    height: 210px;
+    margin: 0 20px 20px 0;
+    float: left;
+    background: #F7F8F9;
+    border-radius: 6px;
+
+    @media (@screen-sm) {
+        width: 350px;
+        height: 210px;
+
+        &.wide,
+        &.big {
+            width: 350px * 2 + 20px;
+        }
+    }
+    @media (@screen-md) {
+        width: 290px;
+
+        &.wide,
+        &.big {
+            width: 290px * 2 + 20px;
+        }
+    }
+    @media (@screen-lg) {
+        width: 330px;
+
+        &.wide,
+        &.big {
+            width: 330px * 2 + 20px;
+        }
+    }
+
+    &.tall,
+    &.big { height: 440px; }
+}
+
+
+
+// demo
+
+.isotope-grid-item.red {  }
+.isotope-grid-item.blue {  }
+.isotope-grid-item.yellow {  }

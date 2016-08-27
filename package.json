@@ -1,0 +1,48 @@
+{
+  "name": "IDTdesign",
+  "description": "IDTdesign index page",
+  "version": "1.0.0",
+  "author": "idtdesign",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "docpad": "~6.78.3",
+    "docpad-plugin-cleanurls": "~2.8.1",
+    "docpad-plugin-coffeescript": "~2.5.0",
+    "docpad-plugin-copy": "~2.1.3",
+    "docpad-plugin-eco": "~2.1.0",
+    "docpad-plugin-geturl": "~2.1.1",
+    "docpad-plugin-ghpages": "~2.4.4",
+    "docpad-plugin-highlightjs": "~2.3.0",
+    "docpad-plugin-marked": "~2.3.0",
+    "docpad-plugin-moment": "~2.0.2",
+    "docpad-plugin-partials": "~2.9.2",
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "^0.8.2",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^0.7.0",
+    "grunt-shell": "^0.7.0",
+    "grunt-text-replace": "^0.3.12",
+    "normalize.css": "^3.0.3",
+    "bettertext.css": "^1.0.1",
+    "flxgrid.css": "https://github.com/paulradzkov/flxgrid.css.git",
+    "bower": "~1.3.5",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-shell-spawn": "^0.3.10",
+    "time-grunt": "^1.3.0"
+  },
+  "main": "node_modules/docpad/bin/docpad-server",
+  "scripts": {
+    "start": "node ./grunt",
+    "postinstall": ""
+  }
+}

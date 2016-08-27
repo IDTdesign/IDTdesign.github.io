@@ -5,14 +5,14 @@ docpadConfig = {
 	templateData:
 		site:
 			# The default title of our website.
-			title: "bossxgen"
+			title: "IDT design"
 
 			# The production url of our website.
-			url: "//idtdesign.github.io/bossxgen"
+			url: "//idtdesign.github.io"
 
 			# The website description (for SEO).
 			description: """
-				bossxgen frontend templates
+				The place where IDT design styleguides live
 				"""
 
 			# The website keywords (for SEO) separated by commas.
@@ -65,7 +65,7 @@ docpadConfig = {
 	plugins:
 		ghpages:
 			deployRemote: 'deploy'
-			deployBranch: 'gh-pages'
+			deployBranch: 'master'
 		marked:
 			gfm: true
 			breaks: true
@@ -117,8 +117,8 @@ docpadConfig = {
 		development:
 			templateData:
 				site:
-					url: 'http://localhost:8888'
-			port: 8888
+					url: 'http://localhost:9999'
+			port: 9999
 
 	# =================================
 	# DocPad Events

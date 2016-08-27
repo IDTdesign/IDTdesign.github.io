@@ -17,20 +17,16 @@ Clone the repository.
 $ npm install
 $ grunt
 ```
-Open [http://localhost:8888/]()
-
-## Documentation
-
-Browse [uicomponents](https://github.com/IDTdesign/bossxgen/tree/master/uicomponents) folder for docs.
+Open [http://localhost:9999/]()
 
 ## Publishing
 
 Before first publishing run this command in GIT console
-`git remote add deploy https://login:password@github.com/IDTdesign/bossxgen.git`
+`git remote add deploy https://login:password@github.com/IDTdesign/idtdesign.github.io.git`
 
 Where *login* and *password* is your Github credentials.
 
-Then run `grunt deploy` — publish to [https://idtdesign.github.io/bossxgen/]()
+Then run `grunt deploy` — publish to [https://idtdesign.github.io]()
 
 More info http://paulradzkov.com/2014/deploy_docpad_site_to_github_pages/
 

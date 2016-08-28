@@ -50,16 +50,7 @@ module.exports = (grunt) ->
 
 		# optimize images if possible
 		imagemin:
-			out:
-				options:
-					optimizationLevel: 3,
-				files: [
-					expand: true,
-					cwd: 'out/images/',
-					src: ['**/*.{png,jpg,gif}'],
-					dest: 'out/images/'
-				]
-			src:
+			source:
 				options:
 					optimizationLevel: 3,
 				files: [
@@ -67,15 +58,6 @@ module.exports = (grunt) ->
 					cwd: 'src/raw/img/',
 					src: ['**/*.{png,jpg,jpeg,gif}'],
 					dest: 'src/raw/img/'
-				]
-			logo:
-				options:
-					optimizationLevel: 3,
-				files: [
-					expand: true,
-					cwd: 'src/documents/docs/logo/',
-					src: ['**/*.{svg,png,jpg,jpeg,gif}'],
-					dest: 'src/documents/docs/logo/'
 				]
 
 		# track changes in src dir and regenerate docpad
@@ -156,8 +138,8 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks 'grunt-text-replace'
 
 	# Register our Grunt tasks.
-	grunt.registerTask 'optimizeimg',   ['svg2png:src', 'newer:imagemin:src']
-	grunt.registerTask 'preprocess',    ['makesprites', 'optimizeimg']
+	grunt.registerTask 'optimizeimg',   ['imagemin:source']
+	grunt.registerTask 'preprocess',    ['optimizeimg']
 	grunt.registerTask 'postprocess',   ['less', 'autoprefixer:bossout']
 	grunt.registerTask 'generate',      ['clean:out', 'shell:docpad', 'postprocess']
 	grunt.registerTask 'server',        ['connect', 'watch:src', 'watch:out', 'watch:uicomponents']

@@ -20,9 +20,9 @@ scripts:
     </div>
     <div class="row row-center-xxs row-middle-xxs isotope-filters">
 
-        <div class="col-xxs-12 col-sm-shrink ui-group">
-            <h3 class="ui-group-title">Filter by project</h3>
-            <div class="button-group js-radio-button-group" data-filter-group="color">
+        <div class="col-xxs-12 col-sm-shrink filter-ui-group">
+            <h3 class="filter-ui-group-title">Filter by project</h3>
+            <div class="filter-button-group js-radio-button-group" data-filter-group="color">
                 <button class="filter-button is-checked" data-filter="">All Projects</button>
                 <button class="filter-button" data-filter=".boss-revolution">BOSS Revolution</button>
                 <button class="filter-button" data-filter=".mvno">BR MVNO</button>
@@ -30,9 +30,9 @@ scripts:
             </div>
         </div>
 
-        <div class="col-xxs-12 col-sm-shrink ui-group">
-            <h3 class="ui-group-title">Filter by type</h3>
-            <div class="button-group js-radio-button-group" data-filter-group="size">
+        <div class="col-xxs-12 col-sm-shrink filter-ui-group">
+            <h3 class="filter-ui-group-title">Filter by type</h3>
+            <div class="filter-button-group js-radio-button-group" data-filter-group="size">
                 <button class="filter-button is-checked" data-filter="">Any Type</button>
                 <button class="filter-button" data-filter=".styleguide">Styleguides</button>
                 <button class="filter-button" data-filter=".manual">Manuals</button>
@@ -41,9 +41,9 @@ scripts:
             </div>
         </div>
 
-        <div class="col-xxs-12 col-sm-shrink ui-group">
-            <h3 class="ui-group-title">Filter by Theme</h3>
-            <div class="button-group js-radio-button-group" data-filter-group="shape">
+        <div class="col-xxs-12 col-sm-shrink filter-ui-group">
+            <h3 class="filter-ui-group-title">Filter by Theme</h3>
+            <div class="filter-button-group js-radio-button-group" data-filter-group="shape">
                 <button class="filter-button is-checked" data-filter="">All Items</button>
                 <button class="filter-button" data-filter=".design">Design</button>
                 <button class="filter-button" data-filter=".dev">Development</button>
@@ -56,6 +56,8 @@ scripts:
 
 
 <div class="isotope-grid">
+    <%- @partial('codestyle', false, {class: 'text-center'}) %>
+    <%- @partial('br-brand-positioning', false, {class: 'big'}) %>
     <div class="isotope-grid-item small deliverable design boss-revolution"></div>
     <div class="isotope-grid-item tall tool dev mvno"></div>
     <div class="isotope-grid-item big styleguide dev idt"></div>
@@ -80,6 +82,7 @@ scripts:
     <div class="isotope-grid-item tall tool dev boss-revolution"></div>
     <div class="isotope-grid-item big styleguide design idt"></div>
     <div class="isotope-grid-item tall tool dev idt"></div>
+    <%- @partial('add-new-item', false, {class: 'small text-center'}) %>
     <div class="isotope-grid-sizer"></div>
 </div>
 

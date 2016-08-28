@@ -1,0 +1,15 @@
+---
+layout: grid-item
+link: https://github.com/IDTdesign/IDTdesign.github.io
+tags:
+  - manual
+  - dev
+---
+
+<header class="card-header">
+    <span class="tag"><%= @document.tags[0] %></span>
+</header>
+<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
+    <h3 class="card-title">Add new post or link to IDT design</h3>
+    <p class="card-text">Contribution rules</p>
+</article>

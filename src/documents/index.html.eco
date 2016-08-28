@@ -56,8 +56,10 @@ scripts:
 
 
 <div class="isotope-grid">
-    <%- @partial('codestyle', false, {class: 'text-center'}) %>
     <%- @partial('br-brand-positioning', false, {class: 'big'}) %>
+    <%- @partial('codestyle', false, {class: 'text-center'}) %>
+    <%- @partial('favicon', false, {class: 'text-center'}) %>
+    <%- @partial('add-new-item', false, {class: 'small text-center'}) %>
     <div class="isotope-grid-item small deliverable design boss-revolution"></div>
     <div class="isotope-grid-item tall tool dev mvno"></div>
     <div class="isotope-grid-item big styleguide dev idt"></div>
@@ -70,19 +72,6 @@ scripts:
     <div class="isotope-grid-item small deliverable dev mvno"></div>
     <div class="isotope-grid-item wide manual dev boss-revolution"></div>
     <div class="isotope-grid-item small deliverable dev idt"></div>
-    <div class="isotope-grid-item tall tool design idt"></div>
-    <div class="isotope-grid-item wide manual dev idt"></div>
-    <div class="isotope-grid-item big styleguide design boss-revolution"></div>
-    <div class="isotope-grid-item wide manual dev mvno"></div>
-    <div class="isotope-grid-item big styleguide dev boss-revolution"></div>
-    <div class="isotope-grid-item wide manual design mvno"></div>
-    <div class="isotope-grid-item big styleguide design mvno"></div>
-    <div class="isotope-grid-item big styleguide dev mvno"></div>
-    <div class="isotope-grid-item tall tool design mvno"></div>
-    <div class="isotope-grid-item tall tool dev boss-revolution"></div>
-    <div class="isotope-grid-item big styleguide design idt"></div>
-    <div class="isotope-grid-item tall tool dev idt"></div>
-    <%- @partial('add-new-item', false, {class: 'small text-center'}) %>
     <div class="isotope-grid-sizer"></div>
 </div>
 

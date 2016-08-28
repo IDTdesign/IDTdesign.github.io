@@ -1,5 +1,5 @@
 @card-radius: 6px;
-@card-border-width: 1px;
+@card-border-width: 0px;
 @card-border-color: transparent;
 @card-spacer-x: 40px;
 @card-spacer-y: 20px;
@@ -43,6 +43,7 @@ a.card {
         border: 4px solid;
         //transition: all .1s;
         opacity: .5;
+        pointer-events: none;
     }
 
     &:not(:hover):before {
@@ -52,6 +53,7 @@ a.card {
 }
 
 .card-title {
+    margin-top: @card-spacer-y;
     margin-bottom: @card-spacer-y;
 }
 

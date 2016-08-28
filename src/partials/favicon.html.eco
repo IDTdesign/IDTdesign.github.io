@@ -1,0 +1,16 @@
+---
+layout: grid-item
+link: https://realfavicongenerator.net/
+tags:
+  - tool
+  - dev
+---
+
+<header class="card-header">
+    <span class="tag"><%= @document.tags[0] %></span>
+</header>
+<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
+    <p><img src="https://realfavicongenerator.net/the_favicon/apple-touch-icon.png" alt="realfavicongenerator.net"></p>
+    <h3 class="card-title">Modern favicon set done in 5 minutes</h3>
+    <p class="card-subtitle">favicon generator</p>
+</article>

@@ -1,0 +1,342 @@
+.buttons-settings() {
+
+    @btn: btn;
+
+    //default settings
+    @btn-font-size: inherit;
+    @btn-font-weight: bold;
+    @btn-line-height: 1.38;
+    @btn-padding-vertical: .5em;
+    @btn-padding-horizontal: 1em;
+    @btn-border-radius: 3px;
+    @btn-border: 1px solid;
+    @btn-background: transparent;
+    @btn-color: inherit;
+    @btn-focus-bxsh: 0 0 0 3px rgba(0,165,255,0.40);
+
+    //alternative styles
+    @primary-render: true;
+    @primary: primary;
+    @primary-border-color: fade(#000, 20%);
+    @primary-background-color: #C10000;
+    @primary-background-color-hover: lighten(@primary-background-color, 10%);
+    @primary-gradient-color: #FF0000;
+    @primary-color: #FFFFFF;
+    @primary-color-hover: @primary-color;
+    @primary-text-shadow: 0px 1px 1px rgba(0,0,0,0.40);
+    @primary-text-transform: uppercase;
+    @primary-pressed-bxsh: inset 0 1px 3px -1px rgba(0,0,0,0.40);
+
+    @default-render: true;
+    @default: default;
+    @default-border-color: fade(#000, 20%);
+    @default-background-color: #DFDFED;
+    @default-background-color-hover: lighten(@default-background-color, 4%);
+    @default-gradient-color: #FEFEFF;
+    @default-color: #C10000;
+    @default-color-hover: lighten(@default-color, 10%);
+    @default-text-shadow: 0px 1px 0px rgba(255,255,255,0.40);
+    @default-text-transform: uppercase;
+    @default-pressed-bxsh: inset 0 1px 3px -1px rgba(0,0,0,0.40);
+
+    @purchase-render: true;
+    @purchase: purchase;
+    @purchase-border-color: fade(#000, 20%);
+    @purchase-background-color: #4D871D;
+    @purchase-background-color-hover: lighten(@purchase-background-color, 8%);
+    @purchase-gradient-color: #63BA11;
+    @purchase-color: #FFFFFF;
+    @purchase-color-hover: @purchase-color;
+    @purchase-text-shadow: 0px 1px 1px rgba(0,0,0,0.40);
+    @purchase-text-transform: uppercase;
+    @purchase-pressed-bxsh: inset 0 1px 3px -1px rgba(0,0,0,0.40);
+
+    @link-render: true;
+    @link: link;
+    @link-color: #0877db;
+    @link-color-hover: #2b9aff;
+}
+
+@buttons-render: {
+    //mixins
+    .button-common-styles() {
+        // [1] - .125em approx. equal to a half of space between words. Required for spacing between buttons in a row.
+        // [2] - Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+        display: inline-block;
+        margin-top: .125em; // [1]
+        margin-bottom: .125em; // [1]
+        background-image: none; // [2]
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        white-space: nowrap;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        transition: all .2s;
+    }
+
+    .button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+        padding: @padding-vertical @padding-horizontal;
+        font-size: @font-size;
+        line-height: @line-height;
+        border-radius: @border-radius;
+    }
+
+    //naked tags
+    button:not([class]),
+    [type="button"]:not([class]),
+    [type="submit"]:not([class]),
+    [type="reset"]:not([class]),
+    [role="button"]:not([class]) {
+        .button-common-styles();
+        .button-size(@btn-padding-vertical; @btn-padding-horizontal; @btn-font-size; @btn-line-height; @btn-border-radius);
+        border: @btn-border;
+        background: @btn-background;
+        color: @btn-color;
+
+        &:focus {
+            outline: none;
+            box-shadow: @btn-focus-bxsh;
+        }
+
+        &[disabled] {
+            opacity: .5;
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+
+    // base styles
+    .@{btn} {
+        .button-common-styles();
+        .button-size(@btn-padding-vertical; @btn-padding-horizontal; @btn-font-size; @btn-line-height; @btn-border-radius);
+        border: @btn-border;
+        background: @btn-background;
+        color: @btn-color;
+
+        &:link,
+        &:visited,
+        &:hover,
+        &:visited:hover {
+            color: @btn-color;
+        }
+
+        &:focus,
+        &.focus {
+            outline: none;
+            box-shadow: @btn-focus-bxsh;
+        }
+
+        &[disabled] {
+            opacity: .5;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        &.@{btn}-inprogress {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABQCAYAAABrjzfBAAAABGdBTUEAALGPC/xhBQAAAfpJREFUaAXtmUFOQzEMRAsLWHEUdtz/EFyFFV0RV/nSyIp/bGeqHwlXqkhCOn2eGbooL7fb7as9Z497u/A9u9R+/96en457br1Xh5hc+XHe+3Dec+sVoOEo1UHpy6/xRngs/XvDA2Md0vNE7J7WANLHIb0C1Pa1PdXBUF8GMPoorDeLODStphnsw3oFqFykOhjui4LR25TeWcThaTWR2qf0ChBcpDqY6gvA6GVaz4o4Na2mgn1arwC7i1QH032BSHG5pDeKOD0tUsF6Sa8Am5NUB5f6ArEey2U9HfHStAcV/FzWK0Bw82xpfiOBDi73RRFQ9BBwuS8KkKJXgMrV0dbsn1w+HKT0Bd6dpncAUvoCgDS9AgRXR8vT/skLxEFaXzoBVU8AaX3pgFS9Auyujn5M+ycvEgcv+/55RK3O7gLoebimbULU/oleARrxuBPxOPiU/38Y4Hj8+Dz1ALqnRfWTdUivAAdOUh28tH8y3Czi0LQDt/RRWK8AlYVUBy/vnwx3FnF4WuWW3qb0ChBspDq4Rf9kOCvi1LTgll6m9QqwW0l1cJv+yXCjiNPT6uKtuleAz3Bwq/6NIt6qfwXYHFhOBD9mtuufjnh5WhGEB0UPHaQI/lvALfsnaRwRbxlvAcIfjLWcfiMrEW/bvyPibftXgFbx+vm0f3LvD1GWyKcOxP5LAAAAAElFTkSuQmCC);
+            background-size: 40px 80px;
+            cursor: default;
+            pointer-events: none;
+            box-shadow: none;
+            opacity: 1;
+            animation-duration: 2s;
+            animation-name: inprogress;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+    @keyframes inprogress {
+        from { background-position: 0    0; }
+        to   { background-position: 60px 0; }
+    }
+
+    // alternative styles
+    .@{btn}-@{primary} when (@primary-render = true) {
+        // [1] - Map background gradients to border-box because we have semitransparent borders
+        border-color: @primary-border-color;
+        background-color: @primary-background-color;
+        background-image: linear-gradient(-180deg, @primary-gradient-color 0%, fade(@primary-gradient-color, 0) 100%);
+        background-origin: border-box; // [1]
+        color: @primary-color;
+        font-weight: @btn-font-weight;
+        text-shadow: @primary-text-shadow;
+        text-transform: @primary-text-transform;
+
+        &:link,
+        &:visited {
+            color: @primary-color;
+        }
+
+        &.hover,
+        &:hover,
+        &:visited:hover {
+            background-color: @primary-background-color-hover;
+            color: @primary-color-hover;
+        }
+
+        &.active,
+        &:active {
+            background-color: @primary-background-color-hover;
+            color: @primary-color-hover;
+            box-shadow: @primary-pressed-bxsh;
+
+            &:focus {
+                box-shadow: @primary-pressed-bxsh, @btn-focus-bxsh;
+            }
+        }
+
+        &[disabled] {
+            opacity: 1;
+            background-image: none;
+            text-shadow: none;
+            color: fade(@primary-color, 80%);
+
+            &:not(.btn-inprogress) {
+                background-image: none;
+            }
+        }
+
+        &.btn-inprogress {
+            color: tint(@primary-background-color, 80%);
+            text-shadow: none;
+        }
+    }
+
+    .@{btn}-@{default} when (@default-render = true) {
+        // [1] - Map background gradients to border-box because we have semitransparent borders.
+        border-color: @default-border-color;
+        background-color: @default-background-color;
+        background-image: linear-gradient(-180deg, @default-gradient-color 0%, fade(@default-gradient-color, 0) 100%);
+        background-origin: border-box; // [1]
+        color: @default-color;
+        font-weight: @btn-font-weight;
+        text-shadow: @default-text-shadow;
+        text-transform: @default-text-transform;
+
+        &:link,
+        &:visited {
+            color: @default-color;
+        }
+
+        &.hover,
+        &:hover,
+        &:visited:hover {
+            background-color: @default-background-color-hover;
+            color: @default-color-hover;
+        }
+
+        &.active,
+        &:active {
+            background-color: @default-background-color-hover;
+            color: @default-color-hover;
+            box-shadow: @default-pressed-bxsh;
+
+            &:focus {
+                box-shadow: @default-pressed-bxsh, @btn-focus-bxsh;
+            }
+        }
+
+        &[disabled] {
+            background-color: lighten(@default-background-color, 4%);
+            opacity: 1;
+            text-shadow: none;
+            color: fade(@default-color, 60%);
+
+            &:not(.btn-inprogress) {
+                background-image: none;
+            }
+        }
+
+        &.btn-inprogress {
+            background-color: lighten(@default-background-color, 4%);
+            color: mix(@default-color, lighten(@default-background-color, 4%), 60%);
+            text-shadow: none;
+        }
+    }
+
+    .@{btn}-@{purchase} when (@purchase-render = true) {
+        // [1] - Map background gradients to border-box because we have semitransparent borders.
+        border-color: @purchase-border-color;
+        background-color: @purchase-background-color;
+        background-image: linear-gradient(-180deg, @purchase-gradient-color 0%, fade(@purchase-gradient-color, 0) 100%);
+        background-origin: border-box; // [1]
+        color: @purchase-color;
+        font-weight: @btn-font-weight;
+        text-shadow: @purchase-text-shadow;
+        text-transform: @purchase-text-transform;
+
+        &:link,
+        &:visited {
+            color: @purchase-color;
+        }
+
+        &.hover,
+        &:hover,
+        &:visited:hover {
+            color: @purchase-color;
+            background-color: lighten(@purchase-background-color, 8%);
+        }
+
+        &.active,
+        &:active {
+            color: @purchase-color;
+            background-color: lighten(@purchase-background-color, 8%);
+            box-shadow: @purchase-pressed-bxsh;
+
+            &:focus {
+                box-shadow: @purchase-pressed-bxsh, @btn-focus-bxsh;
+            }
+        }
+
+        &[disabled] {
+            opacity: 1;
+            background-image: none;
+            text-shadow: none;
+            color: fade(@purchase-color, 80%);
+
+            &:not(.btn-inprogress) {
+                background-image: none;
+            }
+        }
+
+        &.btn-inprogress {
+            color: tint(@purchase-background-color, 80%);
+            text-shadow: none;
+        }
+    }
+
+    .@{btn}-@{link} when (@link-render = true) {
+        border-color: transparent;
+        color: @link-color;
+
+        &:link,
+        &:visited {
+            color: @link-color;
+        }
+
+        &.hover,
+        &:hover,
+        &:visited:hover {
+            color: @link-color-hover;
+            border-color: fade(#000, 10%);
+        }
+
+        &.active,
+        &:active {
+            color: @link-color-hover;
+            border-color: fade(#000, 20%);
+            box-shadow: @purchase-pressed-bxsh;
+
+            &:focus {
+                box-shadow: @purchase-pressed-bxsh, @btn-focus-bxsh;
+            }
+        }
+    }
+
+    .buttons-settings();
+};
+
+@buttons-render();

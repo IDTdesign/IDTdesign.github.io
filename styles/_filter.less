@@ -1,0 +1,69 @@
+/* ui group */
+
+.filter-ui-group {
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    &-title {
+        text-align: center;
+        font-size: 12px;
+        margin: 0 0 .5em;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: #ccc;
+    }
+}
+
+/* ---- button ---- */
+
+.filter-button {
+    display: inline-block;
+    margin: 0;
+    padding: 0.5em 1.25em;
+    border: 2px solid transparent;
+    border-radius: 1.5em;
+    color: #222;
+    background: transparent;
+    font-size: 14px;
+    line-height: 1.5;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-button:hover {
+    color: #F9593A;
+}
+
+.filter-button:active,
+.filter-button.is-checked {
+    color: #fff;
+    background-color: #F9593A;
+}
+
+.filter-button.is-checked {
+    color: #fff;
+    border-color: darken(#F9593A, 5%);
+}
+
+.filter-button:active {
+
+}
+
+/* ---- button-group ---- */
+
+.filter-button-group {
+    border-radius: 1.5em;
+    box-shadow: inset 0 0 0 2px #eee;
+    padding-right: .5em;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .filter-button {
+        float: left;
+        margin-right: -.5em;
+    }
+}

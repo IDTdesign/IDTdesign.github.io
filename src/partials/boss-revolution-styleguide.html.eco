@@ -1,0 +1,23 @@
+---
+layout: grid-item
+tags:
+  - styleguide
+  - boss-revolution
+  - design
+---
+
+<img srcset="
+    img/boss-revolution-style-guide-cover@2x.png 2x
+    " src="img/boss-revolution-style-guide-cover.png" alt="BOSS Revolution Style Guide v1.6" class="card-img">
+<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
+    <ul class="card-text text-lead text-left text-columns-2" style="margin: 1em auto;">
+        <li>Brand Foundation</li>
+        <li>Visual Identity System</li>
+        <li>Icons, Burst, Badges</li>
+        <li>Fonts</li>
+        <li>Print Templates</li>
+        <li>Application</li>
+    </ul>
+    <p class="card-text"><a href="downloads/BOSS_Revolution_Style_Guide_Eng_v_1_6.pdf" class="btn btn-primary">Download PDF</a></p>
+</article>
+<% %>

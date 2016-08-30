@@ -6,16 +6,19 @@ tags:
   - design
 ---
 
-<header class="card-header text-center">
+<header class="card-header text-center text-muted">
     <span class="tag">BOSS Revolution</span>
 </header>
 <article class="card-block flex-grow-sm col-flex-sm row-center-sm">
-    <blockquote class="text-lead">
+    <blockquote class="display-bq-monospace">
         <p>Being away from loved ones creates many challenges.</p>
-        <p>BOSS Revolution understands those challenges and provides you with safe, simple, and affordable ways to stay in touch and send money to your loved ones back home.</p>
-        <p>We do that by offering you communication and financial products, that not only simplify the way you live, but allow you to stay connected to your network back home, at all times. </p>
-        <p>You are here, but you are also there. And BOSS Revolution is always by your side. </p>
-        <h4 class="text-center">Unite Your Worlds℠</h4>
+        <p>BOSS Revolution understands those challenges and provides you with safe, simple, and affordable ways to stay in touch and send money to your loved ones back home.</p>
+        <p>We do that by offering you communication and financial products, that not only simplify the way you live, but allow you to stay connected to your network back home, at all times. </p>
+        <p>You are here, but you are also there. And BOSS Revolution is always by your side. </p>
+        <p><strong>Unite Your Worlds</strong>&thinsp;℠</p>
     </blockquote>
 </article>
+<footer class="card-footer text-right text-muted">
+    — brand positioning
+</footer>
 <% %>

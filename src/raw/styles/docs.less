@@ -1,6 +1,10 @@
 @import (less) "./node_modules/normalize.css/normalize.css";
 @import (less) "./node_modules/bettertext.css/bettertext.less";
 
+body {
+    background-color: #F7F8F9;
+}
+
 .bettertext-settings() {
 
     //settings
@@ -79,10 +83,12 @@
 //@import (less) "_github.less";
 @import (less) "_siteheader.less";
 @import (less) "_filter.less";
+@import (less) "_buttons.less";
 @import (less) "_isotope.less";
 @import (less) "_card.less";
 @import (less) "_tag.less";
 @import (less) "_sitefooter.less";
+@import (less) "_display.less";
 
 * {
     box-sizing: border-box;
@@ -98,4 +104,4 @@
 @screen-lg: ~"min-width: 1440px";  //lg
 @screen-xlg: ~"min-width: 1600px"; //xlg
 
-@screen-typography: @screen-sm;
+@screen-typography: ~"(min-width: 768px)";

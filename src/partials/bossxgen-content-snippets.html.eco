@@ -1,0 +1,16 @@
+---
+layout: grid-item
+link: http://codepen.io/paulradzkov/full/XKRqYd/
+tags:
+  - boss-revolution
+  - manual
+  - dev
+---
+
+<header class="card-header">
+    <span class="tag"><%= @document.tags[1] %></span>
+</header>
+<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
+    <h3 class="card-title">Content Snippets for BOSSXGEN</h3>
+    <p class="card-text">Manual for CMS users</p>
+</article>

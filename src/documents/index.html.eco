@@ -56,12 +56,16 @@ scripts:
 
 
 <div class="isotope-grid">
-    <%- @partial('br-brand-positioning', false, {class: 'big'}) %>
+    <%- @partial('boss-revolution-styleguide', false, {class: 'text-center big'}) %>
     <%- @partial('codestyle', false, {class: 'text-center'}) %>
     <%- @partial('favicon', false, {class: 'text-center'}) %>
+    <%- @partial('br-brand-positioning', false, {class: 'big'}) %>
+    <%- @partial('bossrevolution-homepage-banners', false, {class: 'text-center'}) %>
+    <%- @partial('bossrevolution-homepage-graphics', false, {class: ' text-center'}) %>
+    <%- @partial('bossrevolution-content-snippets', false, {class: 'small text-center'}) %>
+    <%- @partial('bossxgen-content-snippets', false, {class: 'small text-center'}) %>
     <%- @partial('add-new-item', false, {class: 'small text-center'}) %>
     <div class="isotope-grid-item small deliverable design boss-revolution"></div>
-    <div class="isotope-grid-item tall tool dev mvno"></div>
     <div class="isotope-grid-item big styleguide dev idt"></div>
     <div class="isotope-grid-item small deliverable design idt"></div>
     <div class="isotope-grid-item tall tool design boss-revolution"></div>

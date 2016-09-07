@@ -3,7 +3,7 @@ layout: "default"
 title: "BOSSXGEN"
 scripts:
   - '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'
-  - '//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'
+  - '//unpkg.com/isotope-layout@3/dist/isotope.pkgd.js'
   - '/js/index.js'
 ---
 

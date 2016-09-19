@@ -4,9 +4,9 @@
 
     // media breakpoints (default: as on bootstrap)
     @breakpoints:
-        ~"min-width: 768px",
-        ~"min-width: 992px",
-        ~"min-width: 1200px";
+        ~"(min-width: 768px)",
+        ~"(min-width: 992px)",
+        ~"(min-width: 1200px)";
 
     // names for breakpoint suffixes
     @suffixes: xs, sm, md, lg;
@@ -27,7 +27,7 @@
         @current-suffix: extract(@suffixes, @index);
 
         // generating code
-        @media (extract(@breakpoints, (@index - 1))) {
+        @media extract(@breakpoints, (@index - 1)) {
             .@{text}-@{current-suffix}-left    { text-align: left; }
             .@{text}-@{current-suffix}-right   { text-align: right; }
             .@{text}-@{current-suffix}-center  { text-align: center; }

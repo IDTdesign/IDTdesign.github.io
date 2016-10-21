@@ -11,7 +11,7 @@ tags:
     <span class="tag">bossrevolution.com</span>
 </header>
 <article class="card-block flex-grow-sm col-flex-sm">
-    <img src="https://s3.amazonaws.com/storage.invisionapp.com/boards/files/58258049.png?response-content-disposition=attachment%3B%20filename%3D%22indian%252Dgrandmother%252Dus%252Din%252Dlarge%252Epng%22%3B%20filename%2A%3DUTF-8%27%27indian%252Dgrandmother%252Dus%252Din%252Dlarge%252Epng&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1472574029&Signature=De951CgnWKkMtQX%2F4nol0eR5Kw0%3D" alt="" class="card-img">
+    <img src="/img/58258049.png" alt="" class="card-img">
     <h3 class="card-title">Homepage Graphics</h3>
     <p class="card-text">Title images and locale variations</p>
 </article>

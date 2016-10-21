@@ -28,7 +28,7 @@
 
 
 </head>
-<body>
+<body class="">
     <%- @content %>
     <%- @getBlock('scripts').add(@getUrl(@site.scripts)).add(@getUrl(@document.scripts)).toHTML() %>
 </body>

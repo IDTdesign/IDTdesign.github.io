@@ -8,19 +8,9 @@ body {
 .bettertext-settings() {
 
     //settings
-    @fz: 16px;
-    @fz-small: 0.8em;
-    @rythm: 20px;
-    @linel: 50em;
-    @font-body: sans-serif;
-    @font-headers: sans-serif;
-    @scale1: 1.125;
-    @scale2: 1.250;
-    @section-pad: 5vw;
     @bettertext-breakpoint: @screen-typography;
-
-    @lh: 1.4;
-    @m-default: 20px;
+    //@lh: 1.4;
+    //@m-default: 20px;
 }
 
 @import (less) "_text.less";
@@ -77,7 +67,7 @@ body {
 }
 
 //our local components
-@import (less) "_links.less";
+@import (less) "./node_modules/links.less/links.less";
 //@import (less) "./uicomponents/buttons/buttons.less";
 //@import (less) "_highlight.less";
 //@import (less) "_github.less";
@@ -89,6 +79,10 @@ body {
 @import (less) "_tag.less";
 @import (less) "_sitefooter.less";
 @import (less) "_display.less";
+//@import (less) "_highlight.less";
+@import (less) "_github.less";
+@import (less) "_blog.less";
+@import (less) "_breadcrumbs.less";
 
 * {
     box-sizing: border-box;

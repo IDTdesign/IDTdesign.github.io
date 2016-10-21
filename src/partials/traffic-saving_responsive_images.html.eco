@@ -1,0 +1,27 @@
+---
+layout: grid-item
+tags:
+  - manual
+  - development
+---
+
+<div class="card-block card-code" style="font-size: 75%;">
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"
+        //placehold.it/960x240.png 1x,
+        //placehold.it/1920x480.png?text=960x240@2x 2x
+    "</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:768px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"
+        //placehold.it/600x158.png 1x,
+        //placehold.it/1200x316.png?text=600x158@2x 2x
+    "</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"http://placehold.it/640x316.png?text=320x158@2x 2x"</span>
+         <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/320x158.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+</code></pre>
+</div>
+<article class="card-block flex-grow-sm text-center">
+    <h3 class="card-title"><a href="/blog/traffic-saving_responsive_images/" >Traffic-saving Responsive Images</a></h3>
+    <p class="card-text"><span class="tag"><%= @document.tags[0] %></span></p>
+</article>
+<% %>

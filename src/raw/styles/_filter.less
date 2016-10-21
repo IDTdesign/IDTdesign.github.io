@@ -31,7 +31,8 @@
     outline: none;
 }
 
-.filter-button:hover {
+.filter-button:hover,
+.filter-button:focus {
     color: #F9593A;
 }
 
@@ -44,11 +45,12 @@
 .filter-button.is-checked {
     color: #fff;
     border-color: darken(#F9593A, 5%);
+
+    &:focus {
+        box-shadow: 0 0 0 3px rgba(0, 165, 255, 0.4);
+    }
 }
 
-.filter-button:active {
-
-}
 
 /* ---- button-group ---- */
 

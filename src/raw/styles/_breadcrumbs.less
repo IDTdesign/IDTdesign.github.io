@@ -1,0 +1,22 @@
+.breadcrumbs {
+    margin-bottom: 4em;
+    transition: all .4s;
+
+    &:not(:hover) {
+        opacity: .3;
+    }
+
+    &-node {
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+
+        &:not(:hover) {
+            color: #888;
+        }
+    }
+    &-separator {
+        padding: 0 1em;
+        color: #bbb;
+    }
+}

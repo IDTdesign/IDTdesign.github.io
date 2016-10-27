@@ -140,3 +140,5 @@ For devices with high-definition screens we can add additional set of pictures e
         <img srcset="//placehold.it/640x316.png?text=320x158@2x 2x" src="//placehold.it/320x158.png" alt="">
     </picture>
 </figure>
+
+Modern browsers that support `srcset` natively may select a cached file that meets the minimum media condition, even if it is “overkill” for the current media condition. For example, a **2x** file may be shown on a **1x** device, if that **2x** file is already in the cache — there’d be no reason to make an additional request when the user will see no discernable difference, after all. This is typically encountered only on sites with multiple versions of the same image displayed in multiple elements at different sizes. The occasional selection of "oversize" resources — depending on the cache — is currently an expected behavior in native implementations and you may encounter it during testing.

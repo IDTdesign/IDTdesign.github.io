@@ -62,9 +62,9 @@ scripts:
     <%- @partial('br-brand-positioning', false, {class: 'big'}) %>
     <%- @partial('bossrevolution-homepage-banners', false, {class: 'text-center'}) %>
     <%- @partial('bossrevolution-homepage-graphics', false, {class: ' text-center'}) %>
+    <%- @partial('traffic-saving_responsive_images', false, {class: 'wide'}) %>
     <%- @partial('bossrevolution-content-snippets', false, {class: 'small text-center'}) %>
     <%- @partial('bossxgen-content-snippets', false, {class: 'small text-center'}) %>
-    <%- @partial('traffic-saving_responsive_images', false, {class: 'wide'}) %>
     <%- @partial('add-new-item', false, {class: 'small text-center'}) %>
     <div class="isotope-grid-sizer"></div>
 </div>

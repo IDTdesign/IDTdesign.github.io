@@ -96,9 +96,8 @@
     width: ~"calc(100% - 40px)";
     min-height: 210px;
     margin: 0 20px 20px 0;
-    float: left;
     background: #fff;
-    border-radius: 6px;
+    border-radius: 2px;
     overflow: hidden;
 
     @media @screen-sm {
@@ -130,6 +129,10 @@
     &.small { min-height: 210px;}
     &.tall,
     &.big { min-height: 670px; }
+
+    .isotope-grid & {
+        float: left;
+    }
 }
 
 

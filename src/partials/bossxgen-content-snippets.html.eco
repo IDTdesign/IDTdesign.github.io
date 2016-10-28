@@ -1,6 +1,5 @@
 ---
 layout: grid-item
-link: /blog/bossxgen_content_snippets/
 tags:
   - boss-revolution
   - manual
@@ -10,7 +9,7 @@ tags:
 <header class="card-header">
     <span class="tag"><%= @document.tags[1] %></span>
 </header>
-<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
+<a class="card-block card-link flex-grow-sm col-flex-sm row-center-sm" href="/blog/bossxgen_content_snippets/">
     <h3 class="card-title">Content Snippets for BOSSXGEN</h3>
     <p class="card-text">Manual for CMS users</p>
-</article>
+</a>

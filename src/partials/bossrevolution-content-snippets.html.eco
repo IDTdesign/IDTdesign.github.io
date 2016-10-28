@@ -1,6 +1,5 @@
 ---
 layout: grid-item
-link: http://codepen.io/paulradzkov/full/WxjrPo/
 tags:
   - boss-revolution
   - manual
@@ -10,7 +9,7 @@ tags:
 <header class="card-header">
     <span class="tag"><%= @document.tags[1] %></span>
 </header>
-<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
-    <h3 class="card-title">Content Snippets for bossrevolution.com</h3>
+<a class="card-block card-link flex-grow-sm col-flex-sm row-center-sm" href="/blog/bossdtc_content_snippets/">
+    <h3 class="card-title">Content Snippets for BOSS Revolution</h3>
     <p class="card-text">Manual for CMS users</p>
-</article>
+</a>

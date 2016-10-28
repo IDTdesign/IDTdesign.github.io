@@ -1,0 +1,374 @@
+---
+layout: article
+title: Bossrevolution.com Content Snippets
+tags:
+  - boss-revolution
+  - manual
+  - development
+author: Paul Radzkov
+date: October 28, 2016
+---
+
+# Content Snippets for BOSSDTC
+
+<nav class="row">
+    <p class="col-xxs-shrink" style="min-width: 260px">
+        [**Homepage**](#homepage)  
+        [Feature banners (three promo)](#feature-banners-three-promo-)  
+        [Homepage slider](#homepage-slider)
+    </p>
+    <p class="col-xxs-shrink" style="min-width: 260px">
+        [**Banners on inner pages**](#banners-on-inner-pages)  
+        [International Mobile Top Up](#international-mobile-top-up)  
+        [IMTU Country pages](#imtu-country-pages)  
+        [My Account](#my-account)
+    </p>
+    <p class="col-xxs-shrink" style="min-width: 260px">
+        [Services Icons and SVG](#services-icons-and-svg)  
+        [Benefits block](#benefits-block)  
+        [How It Works block](#how-it-works-block)  
+        [Disclaimers above the footer](#disclaimers-above-the-footer)
+    </p>
+    <p class="col-xxs-shrink" style="min-width: 260px">
+        [Alignment classes](#alignment-classes)  
+        [Transformation classes](#transformation-classes)  
+    </p>
+</nav>
+
+## Homepage
+
+### Feature banners (three promo)
+
+<div class="row row-between-xxs">
+    <div class="col-xxs-shrink">
+        <p>
+            ![](https://habrastorage.org/files/e95/7f1/efa/e957f1efa13947b6b101e92882c59a2a.png)
+        </p>
+    </div>
+    <div class="col-xxs-shrink">
+        <%- @partial('bossrevolution-homepage-banners', false, {class: 'text-center'}) %>
+    </div>
+</div>
+
+Zone: `home_index_header`
+
+```html
+...
+<div class="layout--secondary">
+	<h1 class="banner">
+		<a href="/en-us/my-account/international-calling/recharge">
+			<span class="sr-only">Cheap International Calling: Unlimited calls to Mexico cell or landline</span>
+			<picture>
+				<source
+                    media="(max-width:767px)"
+                    srcset="/Content/img/homepage-header-banners/hpb_US-ENG_int-money-transf-special-offer_small_2.png"
+                >
+				<img
+                    src="/Content/img/homepage-header-banners/hpb_US-ENG_int-money-transf-special-offer_2.png"
+                    alt="Cheap International Calling: Unlimited calls to Mexico cell or landline"
+                >
+			</picture>
+		</a>
+	</h1>
+	<h3 class="banner">
+		<a href="/en-us/services/money-transfer">
+			<span class="sr-only">International Money Transfer: First Transaction FREE (up to $300). Fees as low as $1.99</span>
+			<picture>
+				<source
+                    media="(max-width:767px)"
+                    srcset="/Content/img/homepage-header-banners/hpb_US-ENG_int-money-transf-first-transaction-free_small.png"
+                >
+				<img
+                    src="/Content/img/homepage-header-banners/hpb_US-ENG_int-money-transf-first-transaction-free.png"
+                    alt="International Money Transfer: First Transaction FREE (up to $300). Fees as low as $1.99"
+                >
+			</picture>
+		</a>
+	</h3>
+	<h3 class="banner">
+		<a href="/en-us/services/international-mobile-topup">
+			<span class="sr-only">International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries</span>
+			<picture>
+				<source
+                    media="(max-width:767px)"
+                    srcset="/Content/img/homepage-header-banners/hpb_US-ENG_imtu-more-than-150_small.png"
+                >
+				<img
+                    src="/Content/img/homepage-header-banners/hpb_US-ENG_imtu-more-than-150.png"
+                    alt="International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"
+                >
+			</picture>
+		</a>
+	</h3>
+</div>
+...
+```
+
+Checklist:
+
+1. First banner placed inside `h1` tag, other inside `h3`.
+2. Don't forget to update `alt` text and screen readers text ( `.sr-only` ). It's important for SEO.
+
+### Homepage slider
+
+![](https://habrastorage.org/files/283/162/89e/28316289ef484582a309926e5a5d80e6.png)
+
+Zone: `home_index_content`. Often need to add new carousel-indicator and new carousel-item (make it `.active`)
+
+There is example with two slides:
+
+```html
+<ol class="carousel-indicators">
+    <li data-slide-to="0" data-target="#promotions-main" class="active" ></li>
+    <li data-slide-to="1" data-target="#promotions-main"></li>
+</ol>
+<div class="carousel-inner">
+    <div class="item text-center active">
+        <a class="hidden-xs" href="/en-us/services/unlimited-international-calling-plan"><img alt="BOGO Unlimited Plan offer" src="/Content/img/banners/pinless_promo/BR_Pinless_Unlimited_Bogo_Mexico_FInalArts_Banner1140x300_Eng.jpg"></a>
+        <a class="visible-xs" href="/en-us/services/unlimited-international-calling-plan"><img alt="BOGO Unlimited Plan offer" src="/Content/img/banners/pinless_promo/BR_Pinless_Unlimited_Bogo_Mexico_FInalArts_Banner480x320_Eng.jpg"></a>
+    </div>
+    <div class="item text-center">
+        <a class="hidden-xs" href="/en-us/services/money-transfer"><img alt="Your first online money transfer is FREE!" src="/Content/img/banners/mt-FirstFreeTxn/BR-MoneyTransfer-FirstFreeTxn-BannersBanner1140x300_Eng.jpg"></a>
+        <a class="visible-xs" href="/en-us/services/money-transfer"><img alt="Your first online money transfer is FREE!" src="/Content/img/banners/mt-FirstFreeTxn/BR-MoneyTransfer-FirstFreeTxn-BannersBanner480x320_Eng.jpg"></a>
+    </div>
+</div>
+```
+
+To add new slide:
+
+1. Add `div.item` inside `.carousel-inner` — this is slider content.
+2. Add `<li data-slide-to="1" data-target="#promotions-main"></li>` inside `.carousel-indicators` and increment attribute `data-slide-to="1"` — this is navigation circle.
+
+Checklist:
+
+1. Number of navigation circles must be equal to number of slides
+2. Each banner has two sizes —  small (480x320px) and regular (1140x300px): small should be inside class `.visible-xs` — for mobile, regular inside class `.hidden-xs` — tablet and desktop.
+3. Don't forget to update `alt` text for banners for better SEO.
+
+## Banners on inner pages
+
+### International Mobile Top Up
+
+In zone `services_imtu_promo_a`:
+
+```html
+<article class="island visible-xs visible-sm" style="overflow:hidden">
+	<picture>
+		<source
+            media="(max-width:375px)"
+            srcset="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"
+        >
+		<img
+            src="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_600x158_Eng.png"
+            alt="International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"
+            style="width:100%"
+        >
+	</picture>
+</article>
+```
+
+In zone `services_imtu_promo_b`:
+
+```html
+<img
+    src="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"
+    style="width:100%; border-radius:4px;"
+    alt="International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"
+>
+```
+
+
+### IMTU Country pages
+
+Zone `global_mtu`:
+
+```html
+<div style="margin-bottom:20px;">
+	<picture>
+		<source
+            media="(min-width:992px)"
+            srcset="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"
+        >
+		<source
+            media="(min-width:375px)"
+            srcset="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_600x158_Eng.png"
+        >
+		<img
+            src="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"
+            alt="International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"
+            style="width:100%; border-radius:4px;"
+        >
+	</picture>
+</div>
+```
+
+### My Account
+
+![](https://habrastorage.org/files/18c/5b3/79c/18c5b379ccb146b0a06da22e4f5ac283.png)
+
+Zone `account_index_toprightpanel`:
+
+```html
+<picture>
+    <source
+        media="(min-width:1200px)"
+        srcset="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_600x158_Eng.png"
+    >
+	<source
+        media="(min-width:992px)"
+        srcset="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"
+    >
+	<source
+        media="(min-width:375px)"
+        srcset="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_600x158_Eng.png"
+    >
+	<img
+        src="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"
+        alt="International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"
+        style="width:100%; border-radius:4px;"
+    >
+</picture>
+```
+
+Zone `account_index_mtutab`:
+
+```html
+<style type="text/css">
+	.b_MtuDmtuIndex .imtu-only {
+		display: none;
+	}
+</style>
+<div class="imtu-only">
+	<picture>
+		<source
+            media="(min-width:992px)"
+            srcset="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"
+        >
+		<source
+            media="(min-width:375px)"
+            srcset="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_600x158_Eng.png"
+        >
+		<img
+            src="/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"
+            alt="International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"
+            style="width:100%; border-radius:4px;"
+        >
+	</picture>
+</div>
+```
+
+## Services Icons and SVG
+
+![](https://habrastorage.org/files/f4b/2b2/a26/f4b2b2a263d64248bf658d748c04d99c.png)
+
+```html
+<div class="plate plate-default-inset plate-large">
+    <svg xmlns="http://www.w3.org/2000/svg" class="i i--inter-calling">
+        <use xlink:href="#i--inter-calling" />
+    </svg>
+</div>
+```
+
+[More docs for icons](http://idtdesign.github.io/idtfrontend/docs/icons.html)
+
+## Benefits block
+
+![](https://habrastorage.org/files/cbc/cfc/7f0/cbccfc7f08b2453d861b850eb22cdbc0.png)
+
+In zones: `services_moneytransfer_features`, `services_internationalcalling_benefits`, `services_domesticairtimetopup_benefits`
+
+```html
+<article id="benefits" class="island island-default">
+    <h1 class="island--title">Benefits</h1>
+    <div class="benefits benefits-type-services">
+        <div class="benefits--block">
+            <h3>Flexibility and Ease</h3>
+            <p>Our delivery options, payment options and customer support are designed to meet your needs here and your family's needs abroad.</p>
+            <div class="plate plate-default-inset-revert">
+                <svg class="i i--valid" xmlns="http://www.w3.org/2000/svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i--valid"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="benefits--block">
+            <h3>Great Rates</h3>
+            <p>Our service features low transfer fees and competitive exchange rates.</p>
+            <div class="plate plate-default-inset-revert">
+                <svg class="i i--valid" xmlns="http://www.w3.org/2000/svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i--valid"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="benefits--block">
+            <h3>Simple, Safe, Secure</h3>
+            <p>Send money to friends and family with confidence.</p>
+            <div class="plate plate-default-inset-revert">
+                <svg class="i i--valid" xmlns="http://www.w3.org/2000/svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i--valid"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</article>
+```
+
+## How It Works block
+
+![](https://habrastorage.org/files/26f/ce5/50b/26fce550befa42be9aa06ad9c5af45b8.png)
+
+In zones: `services_domesticairtimetopup_how`, `services_unlimitedplan_how`, `services_egift_how_it_works`
+
+```html
+<div class="how-works">
+    <div class="how-works--block">
+        <p><img alt="Enter your one's phone number" src="/Content/img/services/how-it-works-07.png"></p>
+        <h3>Choose your Carrier</h3>
+    </div>
+    <div class="how-works--block">
+        <p><img alt="Confirm the Carrier" src="/Content/img/services/how-it-works-09.png"></p>
+        <h3>Enter the U.S. Mobile Number You’d Like to Recharge</h3>
+    </div>
+    <div class="how-works--block">
+        <p><img alt="Choose an Amount" src="/Content/img/services/how-it-works-03.png"></p>
+        <h3>Choose an Amount</h3>
+    </div>
+</div>
+```
+
+## Disclaimers above the footer
+
+![](https://habrastorage.org/files/61c/b77/f61/61cb77f6141149208e8aa6434121a096.png)
+
+Add `class="notice"`.
+
+```html
+<div class="notice">
+    <p><b>Note:</b> Advertised minutes based on single, non-payphone call from the United States to a landline phone in the chosen country destination using local access. Advertised rates are based on calls from the United States to a landline phone in the chosen country destination using local access. Rates shown are live rates and are subject to change without notice (except where an expiration date is provided). Listed destinations are for landlines except where noted.
+    <br> <b>Important:</b> when calling from a cell phone DO NOT PRESS "SEND" after entering the destination number as this might result in additional charges from your wireless provider. Your wireless carrier may assess roaming or long distance charges when calling a local access number - please check the details of your plan with your provider.</p>
+    <p> Boss Revolution Unlimited Plans Stand Alone Terms: <a href="/en-us/unlimited-plans-terms">www.bossrevolution.com/unlimited-plans-terms</a></p>
+</div>
+```
+
+## Alignment classes
+
+Can be used on block-level elements: `p`, `div`, `h1`.
+
+```html
+<p class="text-left">Left aligned text.</p>
+<p class="text-center">Center aligned text.</p>
+<p class="text-right">Right aligned text.</p>
+<p class="text-justify">Justified text.</p>
+<p class="text-nowrap">No wrap text.</p>
+```
+
+## Transformation classes
+
+Can be used on any elements: `p`, `div`, `h1`, `a`, `span`.
+
+```html
+<p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="text-capitalize">Capitalized text.</p>
+```
+
+<p class="text-muted">An older version of this manual available on http://codepen.io/paulradzkov/full/WxjrPo/</p>

@@ -1,5 +1,5 @@
 ---
-layout: grid-item
+layout: card
 link: https://github.com/IDTdesign/codestyle/blob/master/CSS.md
 tags:
   - styleguide

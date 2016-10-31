@@ -1,0 +1,10 @@
+
+<% if (@document.link) : %>
+    <a href="<%= @document.link %>" target="_blank" class="card <%= @class or '' %> <%= @document.tags.join(' ') %> col-flex-sm">
+        <%- @content %>
+    </a>
+<% else : %>
+    <div class="card <%= @class or '' %> <%= @document.tags.join(' ') %> col-flex-sm">
+        <%- @content %>
+    </div>
+<% end %>

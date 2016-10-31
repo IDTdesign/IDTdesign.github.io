@@ -1,4 +1,4 @@
-@card-radius: 6px;
+@card-radius: 2px;
 @card-border-width: 0px;
 @card-border-color: transparent;
 @card-spacer-x: 40px;
@@ -73,6 +73,24 @@
         }
     }
 
+    &-size {
+        width: 100%;
+        min-height: 210px;
+
+        @media @screen-sm {
+            width: 330px;
+            min-height: 440px;
+
+            &.wide,
+            &.big {
+                width: 330px * 2 + 20px;
+            }
+        }
+
+        &.small { min-height: 210px;}
+        &.tall,
+        &.big { min-height: 670px; }
+    }
 
     //
     // Card Modifiers

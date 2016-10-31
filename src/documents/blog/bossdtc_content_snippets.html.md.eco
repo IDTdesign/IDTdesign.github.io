@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Bossrevolution.com Content Snippets
+title: Content Snippets for BOSSDTC
 tags:
   - boss-revolution
   - manual
@@ -46,7 +46,7 @@ date: October 28, 2016
         </p>
     </div>
     <div class="col-xxs-shrink">
-        <%- @partial('bossrevolution-homepage-banners', false, {class: 'text-center'}) %>
+        <%- @partial('bossrevolution-homepage-banners', false, {class: 'text-center card-border'}) %>
     </div>
 </div>
 

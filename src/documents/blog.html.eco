@@ -1,0 +1,17 @@
+---
+layout: "article"
+title: "Blog"
+---
+
+
+<% for page in @getCollection("blog").toJSON(): %>
+    <section class="blogroll-item">
+        <h2><a href="<%= page.url %>" class="linked-header border-underline"><u class="u"><%= page.title %></u></a></h2>
+        <div class="before-cut"><% @cuttedContent page.contentRenderedWithoutLayouts %></div>
+        <% if (page.author) and (page.date) : %>
+        <footer>
+            <p class="text-muted"><%= page.author %> on <time datetime="<%= page.date %>"><%=@moment(page.date).format('DD MMMM YYYY') %></time></p>
+        </footer>
+        <% end %>
+    </section>
+<% end %>

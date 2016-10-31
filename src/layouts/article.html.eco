@@ -28,23 +28,25 @@
 
 </head>
 <body class="blog-layout">
-    <main class="blog-article">
+    <main class="blog-article col-flex-xs">
         <header class="blog-article-header">
             <nav class="breadcrumbs">
                 <a class="breadcrumbs-node" href="/">IDT&ensp;&middot;&ensp;design</a>
                 <span class="breadcrumbs-separator">/</span>
-                <span class="breadcrumbs-node">Blog</span>
+                <a class="breadcrumbs-node" href="/blog/">Blog</a>
             </nav>
             <% if (@document.tags) : %>
             <p class="blog-article-meta"><span class="tag tag-frame"><%= @document.tags[0] %></span></p>
             <% end %>
         </header>
-        <article class="blog-article-content">
+        <article class="blog-article-content flex-grow-xs">
             <%- @content %>
         </article>
+        <% if (@document.author) and (@document.date) : %>
         <footer class="blog-article-footer">
             <p><%= @document.author %> on <time datetime="<%= @document.date %>"><%=@moment(@document.date).format('DD MMMM YYYY') %></time></p>
         </footer>
+        <% end %>
         <footer class="sitefooter sitefooter-article container-fluid">
             <div class="row row-middle-xxs">
                 <div class="col-xxs-shrink"><img src="https://avatars1.githubusercontent.com/u/7560415?v=3&s=48" width="24" alt="IDT design logo"></div>

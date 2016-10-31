@@ -146,6 +146,6 @@ Modern browsers that support `srcset` natively may select a cached file that mee
 ### See also manuals with real world examples
 
 <div class="row">
-    <div class="col-xxs-12 col-sm-shrink"><%- @partial('bossrevolution-content-snippets', false, {class: 'small text-center'}) %></div>
-    <div class="col-xxs-12 col-sm-shrink"><%- @partial('bossxgen-content-snippets', false, {class: 'small text-center'}) %></div>
+    <div class="col-xxs-12 col-sm-shrink"><%- @partial('bossrevolution-content-snippets', false, {class: 'small text-center card-border'}) %></div>
+    <div class="col-xxs-12 col-sm-shrink"><%- @partial('bossxgen-content-snippets', false, {class: 'small text-center card-border'}) %></div>
 </div>

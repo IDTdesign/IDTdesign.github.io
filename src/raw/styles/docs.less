@@ -62,13 +62,19 @@ body {
 }
 
 .container-fluid {
-    overflow: hidden;
+    //overflow: hidden;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 //our local components
 @import (less) "./node_modules/links.less/links.less";
+@import (less) "_linked-header.less";
+@import (less) "_border-underline.less";
+.border-underline-settings() {
+    @shift:         0.1em;
+}
+
 //@import (less) "./uicomponents/buttons/buttons.less";
 //@import (less) "_highlight.less";
 @import (less) "_github.less";

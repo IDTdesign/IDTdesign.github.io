@@ -1,18 +1,44 @@
-/* ui group */
+.filters-settings() {
+    @color-default: #222;
+    @color-accent: #e21b23;
+    @color-inversed: #fff;
+    @color-subtle: #ccc;
+    @bg-default: transparent;
+    @bg-accent: @color-accent;
+    @v-size: .5em;
+    @h-size: 1.25em;
+    @h-shift: .5em;
+    @fz-base: 14px;
+    @fz-title: 12px;
+    @lh: 1.5;
+    @bdrs: (@lh * 1em);
+    @border-width: 2px;
+    @border-button: @border-width solid @bg-default;
+    @active-shadow: 2px 5px 20px -5px fade((@color-accent + #000), 80%);
+    @focus-shadow: 0 0 0 3px rgba(0, 165, 255, 0.4);
+}
+
+.filterstitle-textstyle() {
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+/* ---- ui group ---- */
 
 .filter-ui-group {
-    margin-top: .5em;
-    margin-bottom: .5em;
+    margin-top: @v-size;
+    margin-bottom: @v-size;
 
     &-title {
-        text-align: center;
-        font-size: 12px;
-        margin: 0 0 .5em;
-        font-weight: normal;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-        color: #ccc;
+        margin: 0 0 @v-size;
+        font-size: @fz-title;
+        .filterstitle-textstyle();
+        color: @color-subtle;
     }
+
+    .filters-settings();
 }
 
 /* ---- button ---- */
@@ -20,44 +46,48 @@
 .filter-button {
     display: inline-block;
     margin: 0;
-    padding: 0.5em 1.25em;
-    border: 2px solid transparent;
-    border-radius: 1.5em;
-    color: #222;
-    background: transparent;
-    font-size: 14px;
-    line-height: 1.5;
+    padding: @v-size @h-size;
+    border: @border-button;
+    border-radius: @bdrs;
+    color: @color-default;
+    background: @bg-default;
+    font-size: @fz-base;
+    line-height: @lh;
     cursor: pointer;
     outline: none;
-}
 
-.filter-button:hover,
-.filter-button:focus {
-    color: #F9593A;
-}
-
-.filter-button:active,
-.filter-button.is-checked {
-    color: #fff;
-    background-color: #F9593A;
-}
-
-.filter-button.is-checked {
-    color: #fff;
-    border-color: darken(#F9593A, 5%);
-
+    &:hover,
     &:focus {
-        box-shadow: 0 0 0 3px rgba(0, 165, 255, 0.4);
+        color: @color-accent;
     }
-}
 
+    &:active,
+    &.is-checked {
+        color: @color-inversed;
+        background-color: @bg-accent;
+    }
+
+    &.is-checked {
+        color: @color-inversed;
+        border-color: darken(@color-accent, 5%);
+        box-shadow: @active-shadow;
+
+        &:focus {
+            box-shadow:
+                @focus-shadow,
+                @active-shadow;
+        }
+    }
+
+    .filters-settings();
+}
 
 /* ---- button-group ---- */
 
 .filter-button-group {
-    border-radius: 1.5em;
-    box-shadow: inset 0 0 0 2px #eee;
-    padding-right: .5em;
+    border-radius: @bdrs;
+    box-shadow: inset 0 0 0 @border-width @color-subtle;
+    padding-right: @h-shift;
 
     &:after {
         content: '';
@@ -66,6 +96,8 @@
     }
     .filter-button {
         float: left;
-        margin-right: -.5em;
+        margin-right: -(@h-shift);
     }
+
+    .filters-settings();
 }

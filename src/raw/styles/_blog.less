@@ -15,12 +15,14 @@
     &-article {
         padding: 5vw 10vw 5vw;
         background: #fff;
+        min-height: 100vh;
 
         @media (min-width: 1601px) {
             max-width: 1560px;
             margin: 2vw auto;
             padding: 3rem 10rem 3rem;
             border: 1px solid #eaecee;
+            min-height: ~"calc(100vh - 4vw)";
         }
 
     }
@@ -63,5 +65,12 @@
             background-color: #ddd;
             margin-bottom: 2em;
         }
+    }
+}
+
+.blogroll {
+
+    &-item {
+        margin: 4em 0;
     }
 }

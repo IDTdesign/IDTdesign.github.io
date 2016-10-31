@@ -59,6 +59,23 @@ docpadConfig = {
 			if s == @document.url
 				"active"
 
+		# Post part before “cut”
+		cuttedContent: (content) ->
+			if @hasReadMore content
+				cutIdx = content.search @cutTag
+				content[0..cutIdx-1]
+			else
+				content
+
+		# Has “cut”?
+		hasReadMore: (content) ->
+			content and ((content.search @cutTag) isnt -1)
+
+		wspToDash: (s) ->
+			s and (s
+				.replace /\ /g, "-"
+			)
+
 
 	ignoreCustomPatterns: /^\S*([.]less)/gm
 
@@ -102,6 +119,12 @@ docpadConfig = {
 		#docs: ->
 		#	@getCollection('documents').findAllLive({url: $startsWith: '/docs'}).on "add", (model) ->
 		#		model.setMetaDefaults({layout:"docs"})
+
+	collections:
+		blog: ->
+			# get all posts by «kind», sort them by «created_at» and set to all «layout»
+			@getCollection("html").findAllLive({url: $startsWith: '/blog/'},[{created_at:-1}]).on "add", (model) ->
+				model.setMetaDefaults({layout:"article"})
 
 	# =================================
 	# Environments

@@ -1,6 +1,6 @@
 ---
 layout: article
-title: BOSSXGEN Content Snippets
+title: Content Snippets for BOSSXGEN
 tags:
   - boss-revolution
   - manual

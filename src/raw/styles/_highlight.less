@@ -17,9 +17,14 @@ Rendered from Markdown as:
 @highlight: highlight;
 
 .@{highlight} {
-    padding: 1.5em;
-    background: #eee;
+    //padding: 1.5em;
+    background: #fff;
     white-space: pre-wrap;
+
+    &:hover {
+        background: #fff6f1;
+        box-shadow: 0 0 0 .5em #fff6f1;
+    }
 
     // bettertext dependency
     article:not([class]) & {

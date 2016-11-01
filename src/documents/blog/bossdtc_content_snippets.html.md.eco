@@ -45,8 +45,15 @@ date: October 28, 2016
             ![](https://habrastorage.org/files/e95/7f1/efa/e957f1efa13947b6b101e92882c59a2a.png)
         </p>
     </div>
-    <div class="col-xxs-shrink">
-        <%- @partial('bossrevolution-homepage-banners', false, {class: 'card-size text-center card-border'}) %>
+    <div class="col-xxs-shrink col-xlg-4">
+        <div class="row">
+            <div class="col-xxs-shrink">
+                <%- @partial('bossrevolution-homepage-banners', false, {class: 'card-size text-center card-border'}) %>
+            </div>
+            <div class="col-xxs-shrink">
+                <%- @partial('bossrevolution-homepage-graphics', false, {class: 'card-size text-center card-border'}) %>
+            </div>
+        </div>
     </div>
 </div>
 

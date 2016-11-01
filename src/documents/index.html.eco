@@ -65,6 +65,7 @@ scripts:
     <%- @partial('traffic-saving_responsive_images', false, {class: 'isotope-grid-item wide'}) %>
     <%- @partial('bossrevolution-content-snippets', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
     <%- @partial('bossxgen-content-snippets', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
+    <%- @partial('flagkit', false, {class: 'isotope-grid-item big'}) %>
     <%- @partial('add-new-item', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
     <div class="isotope-grid-sizer"></div>
 </div>

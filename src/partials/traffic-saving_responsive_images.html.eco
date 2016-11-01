@@ -22,6 +22,7 @@ tags:
 </div>
 <article class="card-block flex-grow-sm text-center">
     <h3 class="card-title"><a href="/blog/traffic-saving_responsive_images/" class="card-link">Traffic-saving Responsive Images</a></h3>
+    <p class="card-text">Guide for frontend developers and content managers</p>
     <p class="card-text"><span class="tag"><%= @document.tags[0] %></span></p>
 </article>
 <% %>

@@ -1,0 +1,28 @@
+---
+layout: card
+tags:
+  - deliverable
+  - dev
+  - design
+---
+
+<img srcset="
+    /img/flagkit@2x.png 1440w,
+    /img/flagkit.png 720w
+    "
+    src="/img/flagkit@0.5x.png"
+    alt="Flag Kit"
+    class="card-img" style="object-fit: cover">
+<article class="card-block flex-grow-sm text-center">
+    <h3 class="card-title">Which flags to use in our projects</h3>
+    <ol class="card-text text-left text-lead">
+        <li>Recommended for new projects and redesigns: <br> <a href="https://github.com/madebybowtie/FlagKit"><strong>FlagKit by Bowtie</strong></a></li>
+    </ol>
+    <p class="card-text"><a href="https://github.com/madebybowtie/FlagKit" class="btn btn-primary">Get on GitHub</a></p>
+    <ol class="card-text text-left" start="2">
+        <li>On BOSSDTC and BOSSXGEN we are using “<a href="https://github.com/IDTdesign/idtfrontend/tree/master/src/raw/Content/img/flags">Round flags</a>”</li>
+        <li>Small <a href="https://github.com/artpolikarpov/Flags">Flag-sprite by Artem Polikarpov</a> <span class="text-muted">(deprecated)</span></li>
+    </ol>
+    <p class="card-text"><span class="tag">Delivarables</span></p>
+</article>
+<% %>

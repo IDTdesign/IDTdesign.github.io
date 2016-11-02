@@ -48,10 +48,10 @@ date: October 28, 2016
     <div class="col-xxs-shrink col-xlg-4">
         <div class="row">
             <div class="col-xxs-shrink">
-                <%- @partial('bossrevolution-homepage-banners', false, {class: 'card-size text-center card-border'}) %>
+                <%- @partial('bossrevolution-homepage-banners', false, {class: 'card-size text-center card-border col-flex-xxs'}) %>
             </div>
             <div class="col-xxs-shrink">
-                <%- @partial('bossrevolution-homepage-graphics', false, {class: 'card-size text-center card-border'}) %>
+                <%- @partial('bossrevolution-homepage-graphics', false, {class: 'card-size text-center card-border col-flex-xxs'}) %>
             </div>
         </div>
     </div>

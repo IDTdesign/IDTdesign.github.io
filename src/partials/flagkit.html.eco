@@ -23,6 +23,6 @@ tags:
         <li>On BOSSDTC and BOSSXGEN we are using “<a href="https://github.com/IDTdesign/idtfrontend/tree/master/src/raw/Content/img/flags">Round flags</a>”</li>
         <li>Small <a href="https://github.com/artpolikarpov/Flags">Flag-sprite by Artem Polikarpov</a> <span class="text-muted">(deprecated)</span></li>
     </ol>
-    <p class="card-text"><span class="tag">Delivarables</span></p>
 </article>
+<footer class="card-footer text-center"><span class="tag">deliverables</span></footer>
 <% %>

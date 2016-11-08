@@ -36,7 +36,7 @@ scripts:
                 <button class="filter-button is-checked" data-filter="">Any Type</button>
                 <button class="filter-button" data-filter=".styleguide">Styleguides</button>
                 <button class="filter-button" data-filter=".manual">Manuals</button>
-                <button class="filter-button" data-filter=".deliverable">Deliverables</button>
+                <button class="filter-button" data-filter=".deliverables">Deliverables</button>
                 <button class="filter-button" data-filter=".tool">Tools</button>
             </div>
         </div>
@@ -66,6 +66,7 @@ scripts:
     <%- @partial('bossrevolution-content-snippets', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
     <%- @partial('bossxgen-content-snippets', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
     <%- @partial('flagkit', false, {class: 'isotope-grid-item big'}) %>
+    <%- @partial('bossrevolution-logo', false, {class: 'isotope-grid-item text-center'}) %>
     <%- @partial('add-new-item', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
     <div class="isotope-grid-sizer"></div>
 </div>

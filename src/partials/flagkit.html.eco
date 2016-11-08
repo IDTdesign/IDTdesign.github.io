@@ -1,7 +1,7 @@
 ---
 layout: card
 tags:
-  - deliverable
+  - deliverables
   - dev
   - design
 ---
@@ -14,7 +14,7 @@ tags:
     alt="Flag Kit"
     class="card-img" style="object-fit: cover">
 <article class="card-block flex-grow-sm text-center">
-    <h3 class="card-title">Which flags to use in our projects</h3>
+    <h3 class="card-title">Default flags in our projects</h3>
     <ol class="card-text text-left text-lead">
         <li>Recommended for new projects and redesigns: <br> <a href="https://github.com/madebybowtie/FlagKit"><strong>FlagKit by Bowtie</strong></a></li>
     </ol>
@@ -24,5 +24,4 @@ tags:
         <li>Small <a href="https://github.com/artpolikarpov/Flags">Flag-sprite by Artem Polikarpov</a> <span class="text-muted">(deprecated)</span></li>
     </ol>
 </article>
-<footer class="card-footer text-center"><span class="tag">deliverables</span></footer>
 <% %>

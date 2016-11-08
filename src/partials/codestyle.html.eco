@@ -8,7 +8,7 @@ tags:
 
 <img class="card-img" srcset="
 img/codestyle@2x.png 2x
-" src="img/codestyle.png" alt="Павел Радьков">
+" src="img/codestyle.png" alt="ide-screenshot">
 <article class="card-block flex-grow-sm col-flex-sm row-center-sm">
     <div class="">
         <h3 class="card-title">CSS codestyle for frontend developers</h3>

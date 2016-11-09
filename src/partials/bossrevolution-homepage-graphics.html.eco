@@ -13,6 +13,6 @@ tags:
 <article class="card-block flex-grow-sm col-flex-sm">
     <img src="/img/58258049.png" alt="" class="card-img">
     <h3 class="card-title">Homepage Graphics</h3>
-    <p class="card-text">Title images and locale variations</p>
+    <p class="card-text">Variations for every locale</p>
 </article>
 <% %>

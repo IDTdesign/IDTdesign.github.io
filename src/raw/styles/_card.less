@@ -204,8 +204,13 @@
 
     /* 1 - hack to hide unwanter paragraphs from md to html rendering */
     &-code {
+        padding: @card-spacer-y @card-spacer-x;
         font-size: 75%;
         background: #fff6f1;
+
+        .highlight {
+            margin: 0;
+        }
 
         p {
             display: none; /* 1 */

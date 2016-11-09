@@ -1,6 +1,5 @@
 ---
 layout: card
-link: https://IDTdesign.github.io/logos/#boss-revolution
 tags:
   - deliverables
   - boss-revolution
@@ -8,11 +7,11 @@ tags:
   - dev
 ---
 
-<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
+<a href="https://IDTdesign.github.io/logos/#boss-revolution" class="card-block card-link flex-grow-sm col-flex-sm row-center-sm">
     <p><img src="https://IDTdesign.github.io/logos/bossrevolution/logo-bossrevolution.svg" alt="BOSS Revolution logo" width="200"></p>
     <h3 class="card-title">Download logo</h3>
     <p class="card-subtitle">svg, png, eps</p>
-</article>
+</a>
 <footer class="card-footer">
     <span class="tag"><%= @document.tags[0] %></span>
 </footer>

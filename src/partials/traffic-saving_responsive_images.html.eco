@@ -5,7 +5,7 @@ tags:
   - development
 ---
 
-<div class="card-block card-code">
+<div class="card-code">
 <pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"
         //placehold.it/960x240.png 1x,

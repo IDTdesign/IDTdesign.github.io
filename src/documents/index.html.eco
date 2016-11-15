@@ -57,10 +57,11 @@ scripts:
 
 <div class="isotope-grid">
     <%- @partial('boss-revolution-styleguide', false, {class: 'isotope-grid-item text-center big'}) %>
+    <%- @partial('bossrevolution-logo', false, {class: 'isotope-grid-item text-center'}) %>
+    <%- @partial('idt-logo', false, {class: 'isotope-grid-item text-center'}) %>
+    <%- @partial('br-brand-positioning', false, {class: 'isotope-grid-item big'}) %>
     <%- @partial('bossrevolution-homepage-banners', false, {class: 'isotope-grid-item text-center'}) %>
     <%- @partial('bossrevolution-homepage-graphics', false, {class: 'isotope-grid-item text-center'}) %>
-    <%- @partial('br-brand-positioning', false, {class: 'isotope-grid-item big'}) %>
-    <%- @partial('bossrevolution-logo', false, {class: 'isotope-grid-item text-center'}) %>
     <%- @partial('bossrevolution-content-snippets', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
     <%- @partial('bossxgen-content-snippets', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
     <%- @partial('traffic-saving_responsive_images', false, {class: 'isotope-grid-item wide'}) %>

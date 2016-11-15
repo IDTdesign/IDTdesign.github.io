@@ -1,0 +1,17 @@
+---
+layout: card
+tags:
+  - deliverables
+  - idt
+  - design
+  - dev
+---
+
+<a href="https://IDTdesign.github.io/logos/#idt" class="card-block card-link flex-grow-sm col-flex-sm row-center-sm">
+    <p><img src="https://IDTdesign.github.io/logos/idt/IDT-logo-reg.svg" alt="IDT logo" width="190"></p>
+    <h3 class="card-title">Download logo</h3>
+    <p class="card-subtitle">svg, png, eps</p>
+</a>
+<footer class="card-footer">
+    <span class="tag"><%= @document.tags[0] %></span>
+</footer>

@@ -24,7 +24,7 @@ $('.isotope-filters-popup-close').on( 'click', function() {
 $('.isotope-filters').on( 'click', '.filter-button', function() {
     var $this = $(this);
     // get group key
-    var $buttonGroup = $this.parents('.button-group');
+    var $buttonGroup = $this.parents('.filter-button-group');
     var filterGroup = $buttonGroup.attr('data-filter-group');
     // set filter for group
     filters[ filterGroup ] = $this.attr('data-filter');
@@ -32,6 +32,7 @@ $('.isotope-filters').on( 'click', '.filter-button', function() {
     var filterValue = concatValues( filters );
     // set filter for Isotope
     $grid.isotope({ filter: filterValue });
+    //console.log(filterValue);
 });
 
 // change is-checked class on buttons

@@ -22,7 +22,7 @@ scripts:
 
         <div class="col-xxs-12 col-sm-shrink filter-ui-group">
             <h3 class="filter-ui-group-title">Filter by project</h3>
-            <div class="filter-button-group js-radio-button-group" data-filter-group="color">
+            <div class="filter-button-group js-radio-button-group" data-filter-group="project">
                 <button class="filter-button is-checked" data-filter="">All Projects</button>
                 <button class="filter-button" data-filter=".boss-revolution">BOSS Revolution</button>
                 <button class="filter-button" data-filter=".mvno">BR MVNO</button>
@@ -32,7 +32,7 @@ scripts:
 
         <div class="col-xxs-12 col-sm-shrink filter-ui-group">
             <h3 class="filter-ui-group-title">Filter by type</h3>
-            <div class="filter-button-group js-radio-button-group" data-filter-group="size">
+            <div class="filter-button-group js-radio-button-group" data-filter-group="type">
                 <button class="filter-button is-checked" data-filter="">Any Type</button>
                 <button class="filter-button" data-filter=".styleguide">Styleguides</button>
                 <button class="filter-button" data-filter=".manual">Manuals</button>
@@ -43,7 +43,7 @@ scripts:
 
         <div class="col-xxs-12 col-sm-shrink filter-ui-group">
             <h3 class="filter-ui-group-title">Filter by Theme</h3>
-            <div class="filter-button-group js-radio-button-group" data-filter-group="shape">
+            <div class="filter-button-group js-radio-button-group" data-filter-group="theme">
                 <button class="filter-button is-checked" data-filter="">All Items</button>
                 <button class="filter-button" data-filter=".design">Design</button>
                 <button class="filter-button" data-filter=".dev">Development</button>

@@ -1,0 +1,21 @@
+---
+layout: card
+link: https://github.com/muffinresearch/payment-icons
+tags:
+  - deliverables
+  - design
+  - dev
+---
+
+<img class="card-img" srcset="
+img/payment-icons@2x.png 2x
+" src="img/payment-icons.png" alt="payment icons">
+<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
+    <div class="">
+        <h3 class="card-title">Payment icons</h3>
+        <p class="card-text">NPM-package</p>
+    </div>
+</article>
+<footer class="card-footer">
+    <span class="tag"><%= @document.tags[0] %></span>
+</footer>

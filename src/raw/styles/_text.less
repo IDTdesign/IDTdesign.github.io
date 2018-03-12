@@ -25,9 +25,10 @@
     .responsive(@index: @m) when (@index > 1) and (@n = (@m - 1)) {
         .responsive((@index - 1)); // next iteration
         @current-suffix: extract(@suffixes, @index);
+        @current-breakpoint: extract(@breakpoints, (@index - 1));
 
         // generating code
-        @media extract(@breakpoints, (@index - 1)) {
+        @media @current-breakpoint {
             .@{text}-@{current-suffix}-left    { text-align: left; }
             .@{text}-@{current-suffix}-right   { text-align: right; }
             .@{text}-@{current-suffix}-center  { text-align: center; }
@@ -35,6 +36,11 @@
 
             .@{text}-@{current-suffix}-columns-2 {
                 column-count: 2;
+                column-gap: 2em;
+            }
+
+            .@{text}-@{current-suffix}-columns-3 {
+                column-count: 3;
                 column-gap: 2em;
             }
         }
@@ -51,6 +57,12 @@
         column-gap: 2em;
     }
 
+    .@{text}-columns-3,
+    .@{text}-@{first-suffix}-columns-3 {
+        column-count: 3;
+        column-gap: 2em;
+    }
+
     .@{text}-lead {
         font-size: 1.2em;
     }
@@ -63,7 +75,7 @@
     .text-settings();
 
     // run after settings! otherwise mixin is undefined
-    .responsive;
+    .responsive();
 };
 
 @text-render();

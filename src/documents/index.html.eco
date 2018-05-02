@@ -64,6 +64,7 @@ scripts:
     <%- @partial('bossxgen-content-snippets', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
     <%- @partial('traffic-saving_responsive_images', false, {class: 'isotope-grid-item wide'}) %>
     <%- @partial('flagkit', false, {class: 'isotope-grid-item big'}) %>
+    <%- @partial('personas', false, {class: 'isotope-grid-item text-center'}) %>
     <%- @partial('payment-icons', false, {class: 'isotope-grid-item text-center'}) %>
     <%- @partial('codestyle', false, {class: 'isotope-grid-item text-center'}) %>
     <%- @partial('favicon', false, {class: 'isotope-grid-item text-center'}) %>

@@ -1,0 +1,21 @@
+---
+layout: card
+link: /downloads/BR-Personas-0518.pdf
+tags:
+  - manual
+  - styleguide
+  - design
+---
+
+<img class="card-img" srcset="
+img/personas@2x.png 2x
+" src="img/personas.png" alt="personas">
+<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
+    <div class="">
+        <h3 class="card-title">Personas</h3>
+        <p>PDF-document</p>
+    </div>
+</article>
+<footer class="card-footer">
+    <span class="tag"><%= @document.tags[0] %></span>
+</footer>

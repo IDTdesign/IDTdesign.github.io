@@ -1,0 +1,15 @@
+---
+layout: card
+tags:
+  - boss-revolution
+  - manual
+  - design
+---
+
+<header class="card-header">
+    <span class="tag"><%= @document.tags[1] %></span>
+</header>
+<a class="card-block card-link flex-grow-sm col-flex-sm row-center-sm" href="/blog/collaborative-workflow/">
+    <h3 class="card-title">Collaborative Workflow with Google Drive File Stream</h3>
+    <p class="card-text">A Manual for Designers</p>
+</a>

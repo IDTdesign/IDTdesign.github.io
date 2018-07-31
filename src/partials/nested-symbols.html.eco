@@ -1,0 +1,15 @@
+---
+layout: card
+link: https://medium.com/sketch-app-sources/sketch-symbols-b36f7355414a
+tags:
+  - manual
+  - design
+---
+
+<header class="card-header">
+    <span class="tag"><%= @document.tags[0] %></span>
+</header>
+<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
+    <h3 class="card-title">How to Create Nested Symbols in Sketch</h3>
+    <p class="card-text">A detailed how-to</p>
+</article>

@@ -1,0 +1,15 @@
+---
+layout: card
+link: https://medium.com/ux-power-tools/sketch-libraries-how-they-work-and-the-crazy-stuff-you-can-do-with-them-fc10f142ac80
+tags:
+  - manual
+  - design
+---
+
+<header class="card-header">
+    <span class="tag"><%= @document.tags[0] %></span>
+</header>
+<article class="card-block flex-grow-sm col-flex-sm row-center-sm">
+    <h3 class="card-title">A Beginner’s Guide to Sketch Libraries</h3>
+    <p class="card-text">Adding libraries to your document</p>
+</article>

@@ -71,6 +71,9 @@ scripts:
     <%- @partial('bossrevolution-homepage-banners', false, {class: 'isotope-grid-item text-center'}) %>
     <%- @partial('bossrevolution-homepage-graphics', false, {class: 'isotope-grid-item text-center'}) %>
     <%- @partial('add-new-item', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
+    <%- @partial('collaborative-workflow.html', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
+    <%- @partial('nested-symbols.html', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
+    <%- @partial('sketch-libraries.html', false, {class: 'isotope-grid-item small text-center card-smallfont'}) %>
     <div class="isotope-grid-sizer"></div>
 </div>
 

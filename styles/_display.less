@@ -1,0 +1,50 @@
+// Decorations, visuals, brandings
+
+.display-bossrev-invert {
+    background: #B21700;
+    color: #FFF;
+}
+
+.display-bq-serif {
+    position: relative;
+    margin-bottom: 0;
+    font-family: 'PT Serif', 'Roboto Slab', Georgia, serif;
+
+    &:after {
+        content: '\201C'; // “
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50%;
+        margin-left: -50%;
+        font-size: 4em;
+        color: rgba(0, 0, 0, .1);
+    }
+}
+
+.display-bq-monospace {
+    position: relative;
+    margin-bottom: 0;
+    font-family: 'Andale Mono', Consolas, monospace;
+
+    &:before {
+        content: '\201C';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        font-size: 4em;
+        color: rgba(0, 0, 0, .1);
+        transform: scale(2, 2);
+    }
+
+    &:after {
+        content: '\201D';
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        font-size: 4em;
+        line-height: 0.25;
+        color: rgba(0, 0, 0, .1);
+        transform: scale(2, 2);
+    }
+}

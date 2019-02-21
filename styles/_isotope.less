@@ -1,0 +1,144 @@
+
+
+/* ---- isotope ---- */
+.isotope-filters {
+    display: none;
+
+    @media @screen-sm {
+        display: flex;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .isotope-filters-popup-close {
+        display: none;
+    }
+
+    &.isotope-filters-popup {
+        display: flex;
+        position: fixed;
+        z-index: 100;
+        left: 20px;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+        background: rgba(255,255,255,.95);
+        align-content: center;
+
+        @media @screen-sm {
+            display: flex;
+            position: static;
+            padding: 0;
+        }
+
+        .isotope-filters-popup-close {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            @media @screen-sm {
+                display: none;
+            }
+        }
+    }
+}
+
+.isotope-filters-trigger {
+
+    @media @screen-sm {
+        display: none;
+    }
+}
+
+.isotope-grid {
+    margin: 2em auto;
+    padding: 20px 0 0 20px;
+    max-width: none;
+    @media @screen-sm {
+        max-width: 350px * 2 + 20px * 3;
+    }
+    @media @screen-md {
+        max-width: 290px * 3 + 20px * 4;
+    }
+    @media @screen-lg {
+        max-width: 330px * 4 + 20px * 5;
+    }
+}
+
+/* clear fix */
+.isotope-grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* grid-item */
+
+.isotope-grid-sizer {
+    float: left;
+    width: ~"calc(100% - 40px)";
+    margin: 0 20px 0 0;
+
+    @media @screen-sm {
+        width: 350px;
+    }
+    @media @screen-md {
+        width: 290px;
+    }
+    @media @screen-lg {
+        width: 330px;
+    }
+}
+
+.isotope-grid-item {
+    width: ~"calc(100% - 40px)";
+    min-height: 210px;
+    background: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+
+    @media @screen-sm {
+        width: 350px;
+        min-height: 440px;
+
+        &.wide,
+        &.big {
+            width: 350px * 2 + 20px;
+        }
+    }
+    @media @screen-md {
+        width: 290px;
+
+        &.wide,
+        &.big {
+            width: 290px * 2 + 20px;
+        }
+    }
+    @media @screen-lg {
+        width: 330px;
+
+        &.wide,
+        &.big {
+            width: 330px * 2 + 20px;
+        }
+    }
+
+    &.small { min-height: 210px;}
+    &.tall,
+    &.big { min-height: 670px; }
+
+    .isotope-grid & {
+        margin: 0 20px 20px 0;
+        float: left;
+    }
+}
+
+
+
+// demo
+
+.isotope-grid-item.red {  }
+.isotope-grid-item.blue {  }
+.isotope-grid-item.yellow {  }

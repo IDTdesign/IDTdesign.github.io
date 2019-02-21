@@ -1,0 +1,81 @@
+
+.text-settings() {
+    @text: text;
+
+    // media breakpoints (default: as on bootstrap)
+    @breakpoints:
+        ~"(min-width: 768px)",
+        ~"(min-width: 992px)",
+        ~"(min-width: 1200px)";
+
+    // names for breakpoint suffixes
+    @suffixes: xs, sm, md, lg;
+
+    // IMPORTANT: suffixes count should be bigger than breakpoints count by 1
+    // suffixes-count = breakpoints-count + 1
+}
+
+@text-render: {
+    //calculations
+    @n: length(@breakpoints); // how many breakpoints we have
+    @m: length(@suffixes); // how many suffixes we have
+    @first-suffix: extract(@suffixes, 1); // first breakpoint suffix
+
+    // generates mobile first classes
+    .responsive(@index: @m) when (@index > 1) and (@n = (@m - 1)) {
+        .responsive((@index - 1)); // next iteration
+        @current-suffix: extract(@suffixes, @index);
+        @current-breakpoint: extract(@breakpoints, (@index - 1));
+
+        // generating code
+        @media @current-breakpoint {
+            .@{text}-@{current-suffix}-left    { text-align: left; }
+            .@{text}-@{current-suffix}-right   { text-align: right; }
+            .@{text}-@{current-suffix}-center  { text-align: center; }
+            .@{text}-@{current-suffix}-justify { text-align: justify; }
+
+            .@{text}-@{current-suffix}-columns-2 {
+                column-count: 2;
+                column-gap: 2em;
+            }
+
+            .@{text}-@{current-suffix}-columns-3 {
+                column-count: 3;
+                column-gap: 2em;
+            }
+        }
+    }
+
+    .@{text}-left,    .@{text}-@{first-suffix}-left    { text-align: left; }
+    .@{text}-right,   .@{text}-@{first-suffix}-right   { text-align: right; }
+    .@{text}-center,  .@{text}-@{first-suffix}-center  { text-align: center; }
+    .@{text}-justify, .@{text}-@{first-suffix}-justify { text-align: justify; }
+
+    .@{text}-columns-2,
+    .@{text}-@{first-suffix}-columns-2 {
+        column-count: 2;
+        column-gap: 2em;
+    }
+
+    .@{text}-columns-3,
+    .@{text}-@{first-suffix}-columns-3 {
+        column-count: 3;
+        column-gap: 2em;
+    }
+
+    .@{text}-lead {
+        font-size: 1.2em;
+    }
+
+    .@{text}-muted {
+        opacity: 0.7;
+    }
+
+
+    .text-settings();
+
+    // run after settings! otherwise mixin is undefined
+    .responsive();
+};
+
+@text-render();

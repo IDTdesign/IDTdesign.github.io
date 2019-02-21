@@ -1,0 +1,108 @@
+@import (less) "./node_modules/normalize.css/normalize.css";
+@import (less) "./node_modules/bettertext.css/bettertext.less";
+
+body {
+    background-color: #F7F8F9;
+    color: #333;
+}
+
+.bettertext-settings() {
+
+    //settings
+    @font-body: -apple-system, BlinkMacSystemFont, sans-serif;
+    @font-headers: @font-body;
+    @bettertext-breakpoint: @screen-typography;
+    //@lh: 1.4;
+    //@m-default: 20px;
+}
+
+@import (less) "_text.less";
+
+.text-settings() {
+    @text: text;
+
+    // media breakpoints (default: as on bootstrap)
+    @breakpoints:
+        @screen-xs,  //xs
+        @screen-sm,  //sm
+        @screen-md,  //md
+        @screen-lg, //lg
+        @screen-xlg; //xlg
+
+    // names for breakpoint suffixes
+    @suffixes: xxs, xs, sm, md, lg, xlg;
+
+    // IMPORTANT: suffixes count should be bigger than breakpoints count by 1
+    // suffixes-count = breakpoints-count + 1
+}
+
+@import (less) "_ul.less";
+
+@import (less) "./node_modules/flxgrid.css/flxgrid.less";
+
+.grid-settings() {
+    @gutter-width: 40px;
+
+    // media breakpoints
+    @breakpoints:
+        @screen-xs,  //xs
+        @screen-sm,  //sm
+        @screen-md,  //md
+        @screen-lg, //lg
+        @screen-xlg; //xlg
+
+    // max-width of containers according breakpoints
+    @container-maw:
+        none,   //xxs→xs
+        none,   //xs→sm
+        960px,  //sm→md
+        1400px, //md→lg
+        1560px; //lg→xlg
+
+    // names for breakpoint suffixes
+    @suffixes: xxs, xs, sm, md, lg, xlg;
+}
+
+.container-fluid {
+    //overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+//our local components
+@import (less) "./node_modules/links.less/links.less";
+@import (less) "_linked-header.less";
+@import (less) "_border-underline.less";
+.border-underline-settings() {
+    @shift:         0.1em;
+}
+
+//@import (less) "./uicomponents/buttons/buttons.less";
+//@import (less) "_highlight.less";
+@import (less) "_github.less";
+@import (less) "_siteheader.less";
+@import (less) "_filter.less";
+@import (less) "_buttons.less";
+@import (less) "_isotope.less";
+@import (less) "_card.less";
+@import (less) "_tag.less";
+@import (less) "_sitefooter.less";
+@import (less) "_display.less";
+@import (less) "_blog.less";
+@import (less) "_breadcrumbs.less";
+
+* {
+    box-sizing: border-box;
+}
+
+
+//global vars
+
+//breakpoints
+@screen-xs: ~"(min-width: 425px)";   //xs
+@screen-sm: ~"(min-width: 768px)";   //sm
+@screen-md: ~"(min-width: 960px)";   //md
+@screen-lg: ~"(min-width: 1440px)";  //lg
+@screen-xlg: ~"(min-width: 1600px)"; //xlg
+
+@screen-typography: @screen-sm;

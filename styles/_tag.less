@@ -1,0 +1,53 @@
+// tags
+
+.tag-settings {
+    @tag: tag;
+    @tag-font-size: .75em;
+    @tag-padding-x: .4em;
+    @tag-padding-y: .25em;
+    @tag-font-weight: normal;
+    @tag-color: #777;
+
+    @tag-pill-padding-x: @tag-padding-x * 1.25;
+}
+
+@tag-render: {
+    // Base class
+
+    .@{tag} {
+        display: inline-block;
+        padding: @tag-padding-y @tag-padding-x;
+        font-size: @tag-font-size;
+        font-weight: @tag-font-weight;
+        line-height: 1;
+        color: @tag-color;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        text-transform: uppercase;
+
+        // Empty tags collapse automatically
+        &:empty {
+            display: none;
+        }
+
+        // Pill tags
+        //
+        // Make them extra rounded with a modifier to replace v3's badges.
+
+        &-pill {
+            border-radius: 1em;
+            padding-right: @tag-pill-padding-x;
+            padding-left: @tag-pill-padding-x;
+        }
+
+        &-frame {
+            border-radius: 2px;
+            border: 1px solid;
+        }
+    }
+
+    .tag-settings();
+};
+
+@tag-render();

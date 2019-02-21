@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <!-- Rendered with Eco -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Properities -->
+    <title>Traffic-saving Responsive Images | IDT design</title>
+    <meta name="description" content="The place where IDT design styleguides live" />
+    <meta name="keywords" content="idt,boss,revolution" />
+
+    <!-- Favicons stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5ba2d5">
+    <meta name="apple-mobile-web-app-title" content="IDT design">
+    <meta name="application-name" content="IDT design">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- DocPad Meta -->
+    <meta name="generator" content="DocPad v6.78.6" />
+
+    <!-- DocPad Styles + Our Own -->
+    <link  rel="stylesheet" href="//idtdesign.github.io/styles/docs.css" /><link  rel="stylesheet" href="//idtdesign.github.io/blog/traffic-saving_responsive_images/visibility.css" />
+
+</head>
+<body class="blog-layout">
+    <main class="blog-article col-flex-xs">
+        <header class="blog-article-header">
+            <nav class="breadcrumbs">
+                <a class="breadcrumbs-node" href="/">IDT&ensp;&middot;&ensp;design</a>
+                <span class="breadcrumbs-separator">/</span>
+                <a class="breadcrumbs-node" href="/blog/">Blog</a>
+            </nav>
+            
+            <p class="blog-article-meta"><span class="tag tag-frame">development</span></p>
+            
+        </header>
+        <article class="blog-article-content flex-grow-xs">
+            <h1 id="traffic-saving-responsive-images">Traffic-saving Responsive Images</h1>
+<p>This is simple image:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/960x240.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span> /&gt;</span>
+</code></pre>
+<figure>
+    <img src="//placehold.it/960x240.png" alt="" />
+</figure>
+
+<p>To make it responsive we usually write some css:</p>
+<pre class="highlight"><code class="hljs css"><span class="hljs-tag">img</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">max-width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+<span class="hljs-rule">}</span></span>
+</code></pre>
+<p>But on small screens we aren&#39;t able to see all the details. We might want to use smaller image.</p>
+<h2 id="the-old-way">The old way</h2>
+<p>When we need different content depending on screen sizes we have to insert separate <code>img</code> tag for every image and apply css classes that show or hide image depending of screen size:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/320x158.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"mobile image"</span>  <span class="hljs-attribute">class</span>=<span class="hljs-value">"visible-xs-inline"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/600x158.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"tablet image"</span>  <span class="hljs-attribute">class</span>=<span class="hljs-value">"visible-sm-inline"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/960x240.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"desktop image"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"visible-md-inline visible-lg-inline"</span>  /&gt;</span>
+</code></pre>
+<figure>
+    <img src="//placehold.it/320x158.png" alt="mobile image"  class="visible-xs-inline" />
+    <img src="//placehold.it/600x158.png" alt="tablet image"  class="visible-sm-inline" />
+    <img src="//placehold.it/960x240.png" alt="desktop image" class="visible-md-inline visible-lg-inline"  />
+</figure>
+
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Simple well-known technique.</li>
+<li>97.34% browser support on Oct 2016. <a href="http://caniuse.com/#feat=css-mediaqueries">http://caniuse.com/#feat=css-mediaqueries</a></li>
+<li>Image switches instantly when resizing viewport.</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Semantically this is three images. It also affects SEO.</li>
+<li>Browser makes all three requests and show only one image according current media rule. Two unnecessary images already downloaded.</li>
+<li>Content and representation are mixed: breakpoints in CSS, urls in HTML. Something may be broken if we try to use this content on different site.</li>
+<li>If CSS fails to load we see all three images.</li>
+</ul>
+<p>Mobile users loads all ‘tablet’ and ‘desktop’ graphics and newer use it. The more image versions we have the more traffic we use.</p>
+<h2 id="the-new-way">The new way</h2>
+<p>There is new <code>picture</code> element to solve the problem:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"//placehold.it/960x240.png"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:768px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"//placehold.it/600x158.png"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/320x158.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+</code></pre>
+<figure>
+    <picture>
+        <source media="(min-width:992px)" srcset="//placehold.it/960x240.png">
+        <source media="(min-width:768px)" srcset="//placehold.it/600x158.png">
+        <img src="//placehold.it/320x158.png" alt="">
+    </picture>
+</figure>
+
+<p>This is ‘mobile first’ approach when we fall back to old <code>img</code> tag with the smallest image inside. Old browsers that doesn&#39;t understand <code>picture</code> and <code>sourse</code> tags see only <code>img</code> element.</p>
+<p>We may reverse the logic to ‘desktop first’ approach:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(max-width:768px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"//placehold.it/320x158.png"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(max-width:992px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"//placehold.it/600x158.png"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/960x240.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+</code></pre>
+<figure>
+    <picture>
+        <source media="(max-width:768px)" srcset="//placehold.it/320x158.png">
+        <source media="(max-width:992px)" srcset="//placehold.it/600x158.png">
+        <img src="//placehold.it/960x240.png" alt="">
+    </picture>
+</figure>
+
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Semantically this is one image with multiple representations.</li>
+<li>Browser makes one requests according current media rule. When (if) screen size changes browser make additional request.</li>
+<li>Image media rules are not connected to css. Content well transferrable between different sites.</li>
+<li>If CSS fails to load we see only one correct image.</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>72.57% browser support on Oct 2016. <a href="http://caniuse.com/#search=picture">http://caniuse.com/#search=picture</a></li>
+<li>Images switches not immediately on resize (seen on slow connections).</li>
+</ul>
+<h2 id="upgrade-to-retina-images">Upgrade to ‘retina’ images</h2>
+<p>For devices with high-definition screens we can add additional set of pictures exported @2x.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"
+        //placehold.it/960x240.png 1x,
+        //placehold.it/1920x480.png?text=960x240@2x 2x
+    "</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:768px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"
+        //placehold.it/600x158.png 1x,
+        //placehold.it/1200x316.png?text=600x158@2x 2x
+    "</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"//placehold.it/640x316.png?text=320x158@2x 2x"</span>
+         <span class="hljs-attribute">src</span>=<span class="hljs-value">"//placehold.it/320x158.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+</code></pre>
+<figure>
+    <picture>
+        <source media="(min-width:992px)" srcset="//placehold.it/960x240.png 1x, //placehold.it/1920x480.png?text=960x240@2x 2x">
+        <source media="(min-width:768px)" srcset="//placehold.it/600x158.png 1x, //placehold.it/1200x316.png?text=600x158@2x 2x">
+        <img srcset="//placehold.it/640x316.png?text=320x158@2x 2x" src="//placehold.it/320x158.png" alt="">
+    </picture>
+</figure>
+
+<p>Modern browsers that support <code>srcset</code> natively may select a cached file that meets the minimum media condition, even if it is “overkill” for the current media condition. For example, a <strong>2x</strong> file may be shown on a <strong>1x</strong> device, if that <strong>2x</strong> file is already in the cache — there’d be no reason to make an additional request when the user will see no discernable difference, after all. This is typically encountered only on sites with multiple versions of the same image displayed in multiple elements at different sizes. The occasional selection of &quot;oversize&quot; resources — depending on the cache — is currently an expected behavior in native implementations and you may encounter it during testing.</p>
+<h3 id="see-also-manuals-for-real-world-examples">See also manuals for real world examples</h3>
+<div class="row">
+    <div class="col-xxs-12 col-sm-shrink">
+    <div class="card card-size small text-center card-border boss-revolution manual dev col-flex-sm">
+        <header class="card-header">
+    <span class="tag">manual</span>
+</header>
+<a class="card-block card-link flex-grow-sm col-flex-sm row-center-sm" href="/blog/bossdtc_content_snippets/">
+    <h3 class="card-title">Content Snippets for BOSS Revolution</h3>
+    <p class="card-text">Manual for CMS users</p>
+</a>
+    </div>
+
+</div>
+    <div class="col-xxs-12 col-sm-shrink">
+    <div class="card card-size small text-center card-border boss-revolution manual dev col-flex-sm">
+        <header class="card-header">
+    <span class="tag">manual</span>
+</header>
+<a class="card-block card-link flex-grow-sm col-flex-sm row-center-sm" href="/blog/bossxgen_content_snippets/">
+    <h3 class="card-title">Content Snippets for BOSSXGEN</h3>
+    <p class="card-text">Manual for CMS users</p>
+</a>
+    </div>
+
+</div>
+</div>
+        </article>
+        
+        <footer class="blog-article-footer">
+            <p>Paul Radzkov on <time datetime="Thu Oct 20 2016 00:00:00 GMT+0700 (Indochina Time)">20 October 2016</time></p>
+        </footer>
+        
+        <footer class="sitefooter sitefooter-article container-fluid">
+            <div class="row row-middle-xxs">
+                <div class="col-xxs-shrink"><img src="https://avatars1.githubusercontent.com/u/7560415?v=3&s=48" width="24" alt="IDT design logo"></div>
+                <div class="col-xxs-shrink">© 2016 IDT Corp</div>
+                <div class="col-xxs-shrink"><a href="https://github.com/IDTdesign">IDT design on GitHub</a></div>
+            </div>
+        </footer>
+    </main>
+    
+</body>
+</html>

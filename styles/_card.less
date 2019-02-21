@@ -1,0 +1,242 @@
+@card-radius: 2px;
+@card-border-width: 0px;
+@card-border-color: transparent;
+@card-spacer-x: 40px;
+@card-spacer-y: 16px;
+@card-bg: #FFF;
+@card-bxsh: 0 0 0 1px rgba(0,0,0,0.01);
+@card-bxsh-hover: 0 50px 70px -20px rgba(0,0,0,0.3);
+@card-cap-bg: transparent;
+@card-img-overlay-padding: 0;
+
+
+//
+// Base styles
+//
+
+.card {
+    position: relative;
+    margin-bottom: @card-spacer-y;
+    background-color: @card-bg;
+    border: @card-border-width solid @card-border-color;
+    box-shadow: @card-bxsh;
+    transition: box-shadow .3s ease;
+
+    &:hover {
+        box-shadow: @card-bxsh-hover;
+        z-index: 2;
+    }
+
+    //
+    // If card is a link
+    //
+
+    a& {
+        text-decoration: none;
+
+        &:link:not(:hover):not(:focus),
+        &:visited:not(:hover):not(:focus) {
+            color: inherit;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: inherit;
+            border: 4px solid;
+            transition: all .3s;
+            pointer-events: none;
+        }
+
+        &:after {
+            z-index: 2;
+            border-color: @card-bg;
+            opacity: .3;
+        }
+
+        &:not(:hover):not(:focus):before {
+            border: 4px solid transparent;
+        }
+
+        &:not(:hover):not(:focus):after {
+            border: 4px solid transparent;
+            opacity: 1;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-size {
+        width: 100%;
+        min-height: 210px;
+
+        @media @screen-sm {
+            width: 330px;
+            min-height: 440px;
+
+            &.wide,
+            &.big {
+                width: 330px * 2 + 20px;
+            }
+        }
+
+        &.small { min-height: 210px;}
+        &.tall,
+        &.big { min-height: 670px; }
+    }
+
+    //
+    // Card Modifiers
+    //
+
+    &-border {
+        border: 1px solid fade(#000, 5%);
+
+        // fix border positioning if card is a link
+        a&:before,
+        a&:after {
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+        }
+    }
+
+    &-smallfont {
+        font-size: .875rem;
+    }
+
+    //
+    // Content blocks
+    //
+
+    &-block {
+        padding: @card-spacer-y @card-spacer-x;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+
+    &-title {
+        margin-top: @card-spacer-y;
+        margin-bottom: @card-spacer-y;
+    }
+
+    &-subtitle {
+        margin-top: -(@card-spacer-y / 2);
+    }
+
+    &-text:last-child {
+        margin-bottom: 0;
+    }
+
+    &-link {
+        text-decoration: none;
+
+        &:link:not(:hover):not(:focus),
+        &:visited:not(:hover):not(:focus) {
+            color: inherit;
+        }
+    }
+
+
+    //
+    // Optional textual caps
+    //
+
+    &-header {
+
+        padding: (@card-spacer-y / 2) @card-spacer-x;
+        background-color: @card-cap-bg;
+        border-bottom: @card-border-width solid @card-border-color;
+
+        &:first-child {
+
+        }
+    }
+
+    &-footer {
+
+        padding: @card-spacer-y @card-spacer-x;
+        background-color: @card-cap-bg;
+        border-top: @card-border-width solid @card-border-color;
+
+        &:last-child {
+
+        }
+    }
+
+
+    //
+    // Header navs
+    //
+
+    &-header-tabs {
+        margin-right: -(@card-spacer-x / 2);
+        margin-bottom: -@card-spacer-y;
+        margin-left: -(@card-spacer-x / 2);
+        border-bottom: 0;
+    }
+
+    &-header-pills {
+        margin-right: -(@card-spacer-x / 2);
+        margin-left: -(@card-spacer-x / 2);
+    }
+
+    //
+    // Blockquote
+    //
+
+    &-blockquote {
+        padding: 0;
+        margin-bottom: 0;
+        border-left: 0;
+    }
+
+    /* 1 - hack to hide unwanter paragraphs from md to html rendering */
+    &-code {
+        padding: @card-spacer-y @card-spacer-x;
+        font-size: 75%;
+        background: #fff6f1;
+
+        .highlight {
+            margin: 0;
+        }
+
+        p {
+            display: none; /* 1 */
+        }
+    }
+
+    // Card image
+    &-img {
+        width: 100%;
+
+        &-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: @card-img-overlay-padding;
+        }
+
+        // Card image caps
+        &-top {
+
+        }
+
+        &-bottom {
+
+        }
+    }
+}

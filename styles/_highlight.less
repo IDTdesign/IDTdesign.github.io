@@ -1,0 +1,43 @@
+/*
+
+# Highlight — a block of code
+
+Rendered from Markdown as:
+
+```html
+<pre class="highlight"><code class="hljs less">
+
+... some content ...
+
+</code></pre>
+```
+
+*/
+
+@highlight: highlight;
+
+.@{highlight} {
+    //padding: 1.5em;
+    background: #fff;
+    white-space: pre-wrap;
+
+    &:hover {
+        background: #fff6f1;
+        box-shadow: 0 0 0 .5em #fff6f1;
+    }
+
+    // bettertext dependency
+    article:not([class]) & {
+        margin-left: -5vw;
+        padding-left: 5vw;
+        margin-right: -5vw;
+        padding-right: 5vw;
+    }
+
+    section:not([class]) & {
+        margin-left: -5vw;
+        padding-left: 5vw;
+        margin-right: -5vw;
+        padding-right: 5vw;
+    }
+}

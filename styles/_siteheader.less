@@ -1,0 +1,25 @@
+.siteheader {
+    padding: 5vw 20px;
+    text-align: center;
+
+    &-tag {
+        color: #777;
+        font-size: 1.125em;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+    }
+
+    &-title {
+        font-size: 1.625em;
+        max-width: 18em;
+        margin-left: auto;
+        margin-right: auto;
+        @media @screen-sm {
+            font-size: calc(~"1em + 2.5vw");
+        }
+        @media @screen-xlg {
+            font-size: 3.5em;
+        }
+    }
+}

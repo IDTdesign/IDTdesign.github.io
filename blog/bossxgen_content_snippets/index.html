@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <!-- Rendered with Eco -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Properities -->
+    <title>Content Snippets for BOSSXGEN | IDT design</title>
+    <meta name="description" content="The place where IDT design styleguides live" />
+    <meta name="keywords" content="idt,boss,revolution" />
+
+    <!-- Favicons stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5ba2d5">
+    <meta name="apple-mobile-web-app-title" content="IDT design">
+    <meta name="application-name" content="IDT design">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- DocPad Meta -->
+    <meta name="generator" content="DocPad v6.78.6" />
+
+    <!-- DocPad Styles + Our Own -->
+    <link  rel="stylesheet" href="//idtdesign.github.io/styles/docs.css" />
+
+</head>
+<body class="blog-layout">
+    <main class="blog-article col-flex-xs">
+        <header class="blog-article-header">
+            <nav class="breadcrumbs">
+                <a class="breadcrumbs-node" href="/">IDT&ensp;&middot;&ensp;design</a>
+                <span class="breadcrumbs-separator">/</span>
+                <a class="breadcrumbs-node" href="/blog/">Blog</a>
+            </nav>
+            
+            <p class="blog-article-meta"><span class="tag tag-frame">boss-revolution</span></p>
+            
+        </header>
+        <article class="blog-article-content flex-grow-xs">
+            <h1 id="content-snippets-for-bossxgen">Content Snippets for BOSSXGEN</h1>
+<h2 id="banner-filenames">Banner filenames</h2>
+<p>Template for naming files:</p>
+<ul>
+<li><code>US-ENG_br-club_1000x80.png</code> (large)</li>
+<li><code>US-ENG_br-club_500x120.png</code> (small)</li>
+</ul>
+<p>where</p>
+<ul>
+<li><code>US-ENG</code> is &quot;Culture-Language&quot;: US-SPA, UK-ENG, DE-GER etc</li>
+<li><code>br-club</code> — banner name. Any short name</li>
+<li><code>_1000x80</code> or <code>_500x120</code> — size of banner. Also known as &quot;large&quot; and &quot;small&quot;</li>
+<li><code>.png</code> or <code>.jpg</code> or <code>.gif</code> — pick format that provide smaller file size.</li>
+</ul>
+<h2 id="resources-in-cms">Resources in CMS</h2>
+<p>CMS short codes:</p>
+<ul>
+<li><code><del>[[Image:cubaspanish]]</del></code> —  <strong>(deprecated)</strong> insert an image from CMS.</li>
+<li><code><del>[[File:yiptvbanner]]</del></code> — <strong>(deprecated)</strong> insert an image url from CMS.</li>
+<li><code>[[Resource:yiptvbanner]]</code> — insert an image url from CMS.</li>
+<li><code>[[Attachment:yiptvbannerpdf]]</code> — insert a link to attachement (pdf, doc, zip).</li>
+</ul>
+<h2 id="splash-page-banners">Splash page banners</h2>
+<p><img src="https://habrastorage.org/files/38c/ba8/c87/38cba8c87fdd4546aa41e08f7c61f0fe.png" alt=""></p>
+<p>Single banner:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item active"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:yiptvbannerpdf]]"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:yiptvbanner]]"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Example banner"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+</code></pre>
+<p>Two and more banners automatically activate caroucel:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item active"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:yiptvbannerpdf]]"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:yiptvbanner]]"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Example banner"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:yiptvbannerpdf]]"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:yiptvbanner]]"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Example banner"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>First <code>.item</code> should always have class <code>.active</code>.</p>
+<h2 id="responsive-splash-banners">Responsive Splash banners</h2>
+<p>Since Splash page has two columns we need four states for banners to best fit:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item active"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:BRClubEnglishFlyer]]"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:1200px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"[[Resource:BRClubBannerEnglishLarge]]"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span>  <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"[[Resource:BRClubBannerEnglishSmall]]"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:768px)"</span>  <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"[[Resource:BRClubBannerEnglishLarge]]"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:BRClubBannerEnglishSmall]]"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Example banner"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h2 id="product-page-banner">Product page banner</h2>
+<p><img src="https://habrastorage.org/files/245/503/ba8/245503ba874c4bc5a111c57a7941e477.png" alt=""></p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"banner banner-top"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:yiptvbannerpdf]]"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:yiptvbanner]]"</span> <span class="hljs-attribute">border</span>=<span class="hljs-value">"0/"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h2 id="product-page-responsive-banner-with-two-sizes-">Product page responsive banner (with two sizes):</h2>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"banner banner-top"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:BRClubEnglishFlyer]]"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"[[Resource:BRClubBannerEnglishLarge]]"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:BRClubBannerEnglishSmall]]"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Example banner"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h2 id="product-page-slider">Product page slider</h2>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"prodpage-slider"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel carousel-default slide"</span> <span class="hljs-attribute">data-ride</span>=<span class="hljs-value">"carousel"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Wrapper for slides --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-inner"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"listbox"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item active"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:CubacelAug2016ENG800PDF]]"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:CubacelAugust2016ENG800]]"</span> <span class="hljs-attribute">border</span>=<span class="hljs-value">"0"</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:Tigo100PointBonusPromoFlyerEnglish]]"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:Tigo100PointBonusPromoBannerV3English]]"</span> <span class="hljs-attribute">border</span>=<span class="hljs-value">"0"</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- end of Wrapper for slides --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h2 id="product-page-slider-with-arrows">Product page slider with arrows</h2>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"prodpage-slider"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel carousel-default slide"</span> <span class="hljs-attribute">data-ride</span>=<span class="hljs-value">"carousel"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Wrapper for slides --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-inner"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"listbox"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item active"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:CubacelAug2016ENG800PDF]]"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:CubacelAugust2016ENG800]]"</span> <span class="hljs-attribute">border</span>=<span class="hljs-value">"0"</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:Tigo100PointBonusPromoFlyerEnglish]]"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:Tigo100PointBonusPromoBannerV3English]]"</span> <span class="hljs-attribute">border</span>=<span class="hljs-value">"0"</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- end of Wrapper for slides --&gt;</span>
+    <span class="hljs-comment">&lt;!-- Controls --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left carousel-control"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#prodpage-slider"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"prev"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"i i--slider-arrow-left"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#i--slider-arrow-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right carousel-control"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#prodpage-slider"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"next"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"i i--slider-arrow-right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#i--slider-arrow-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h2 id="product-page-slider-with-arrows-and-responsive-banners-inside">Product page slider with arrows and responsive banners inside</h2>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"prodpage-slider"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel carousel-default slide"</span> <span class="hljs-attribute">data-ride</span>=<span class="hljs-value">"carousel"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Wrapper for slides --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-inner"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"listbox"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item active"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:BRClubEnglishFlyer]]"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"[[Resource:BRClubBannerEnglishLarge]]"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:BRClubBannerEnglishSmall]]"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Example banner"</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"[[Attachment:Tigo100PointBonusPromoFlyerEnglish]]"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span> <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"[[Resource:Tigo100PointBonusPromoBannerV3EnglishLarge]]"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"[[Resource:Tigo100PointBonusPromoBannerV3EnglishSmall]]"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Example banner"</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- end of Wrapper for slides --&gt;</span>
+    <span class="hljs-comment">&lt;!-- Controls --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left carousel-control"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#prodpage-slider"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"prev"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"i i--slider-arrow-left"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#i--slider-arrow-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right carousel-control"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#prodpage-slider"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"next"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"i i--slider-arrow-right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#i--slider-arrow-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h2 id="contest">Contest</h2>
+<p><img src="https://habrastorage.org/files/65a/561/32d/65a56132d7b5407682e9a2a9a753f8ff.png" alt=""></p>
+<p>Contest markup with styles:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"contest-content blockrow"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blockrow--col contest-details contest-data3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>MONEY TRANSFER<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>SUMMER PROMOTIONS<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>EARN $3<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>ON EVERY TRANSFER LARGER THAN $100<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blockrow--col contest-data1"</span>&gt;</span>
+        Transaction to date
+        <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"contest-output contest-output-big"</span>&gt;</span>1500<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blockrow--col contest-data2"</span>&gt;</span>
+        Bonus to date
+        <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"contest-output contest-output-big"</span>&gt;</span>$25500<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+<span class="hljs-class">.contest-content</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">12px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.contest-content</span> <span class="hljs-tag">h1</span>,
+<span class="hljs-class">.contest-content</span> <span class="hljs-tag">h2</span>,
+<span class="hljs-class">.contest-content</span> <span class="hljs-tag">h3</span>,
+<span class="hljs-class">.contest-content</span> <span class="hljs-tag">h4</span>,
+<span class="hljs-class">.contest-content</span> <span class="hljs-tag">h5</span>,
+<span class="hljs-class">.contest-content</span> <span class="hljs-tag">h6</span>,
+<span class="hljs-class">.contest-content</span> <span class="hljs-tag">p</span>,
+<span class="hljs-class">.contest-content</span> <span class="hljs-tag">ul</span>,
+<span class="hljs-class">.contest-content</span> <span class="hljs-tag">ol</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">4px</span> <span class="hljs-number">0</span></span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.contest-details</span>,
+<span class="hljs-class">.contest-data1</span>,
+<span class="hljs-class">.contest-data2</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">10px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">vertical-align</span>:<span class="hljs-value"> middle <span class="hljs-important">!important</span></span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.contest-data1</span>,
+<span class="hljs-class">.contest-data2</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">25%</span></span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.contest-data3</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#FFF</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#01b000</span></span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.contest-data1</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#FFF</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#555</span></span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.contest-data2</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#333</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ddd</span></span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.contest-output</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> block</span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.contest-output-big</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">200%</span></span></span>;
+<span class="hljs-rule">}</span></span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+</code></pre>
+<h2 id="alignment-classes">Alignment classes</h2>
+<p>Can be used on block-level elements: <code>p</code>, <code>div</code>, <code>h1</code>.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-left"</span>&gt;</span>Left aligned text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-center"</span>&gt;</span>Center aligned text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Right aligned text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-justify"</span>&gt;</span>Justified text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-nowrap"</span>&gt;</span>No wrap text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+<h2 id="transformation-classes">Transformation classes</h2>
+<p>Can be used on any elements: <code>p</code>, <code>div</code>, <code>h1</code>, <code>a</code>, <code>span</code>.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-lowercase"</span>&gt;</span>Lowercased text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-uppercase"</span>&gt;</span>Uppercased text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-capitalize"</span>&gt;</span>Capitalized text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+<p class="text-muted">An older version of this manual available on <a href="http://codepen.io/paulradzkov/full/XKRqYd/">http://codepen.io/paulradzkov/full/XKRqYd/</a></p>
+        </article>
+        
+        <footer class="blog-article-footer">
+            <p>Paul Radzkov on <time datetime="Fri Oct 21 2016 00:00:00 GMT+0700 (Indochina Time)">21 October 2016</time></p>
+        </footer>
+        
+        <footer class="sitefooter sitefooter-article container-fluid">
+            <div class="row row-middle-xxs">
+                <div class="col-xxs-shrink"><img src="https://avatars1.githubusercontent.com/u/7560415?v=3&s=48" width="24" alt="IDT design logo"></div>
+                <div class="col-xxs-shrink">© 2016 IDT Corp</div>
+                <div class="col-xxs-shrink"><a href="https://github.com/IDTdesign">IDT design on GitHub</a></div>
+            </div>
+        </footer>
+    </main>
+    
+</body>
+</html>

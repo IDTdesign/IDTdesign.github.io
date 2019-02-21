@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <!-- Rendered with Eco -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Properities -->
+    <title>Content Snippets for BOSSDTC | IDT design</title>
+    <meta name="description" content="The place where IDT design styleguides live" />
+    <meta name="keywords" content="idt,boss,revolution" />
+
+    <!-- Favicons stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5ba2d5">
+    <meta name="apple-mobile-web-app-title" content="IDT design">
+    <meta name="application-name" content="IDT design">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- DocPad Meta -->
+    <meta name="generator" content="DocPad v6.78.6" />
+
+    <!-- DocPad Styles + Our Own -->
+    <link  rel="stylesheet" href="//idtdesign.github.io/styles/docs.css" />
+
+</head>
+<body class="blog-layout">
+    <main class="blog-article col-flex-xs">
+        <header class="blog-article-header">
+            <nav class="breadcrumbs">
+                <a class="breadcrumbs-node" href="/">IDT&ensp;&middot;&ensp;design</a>
+                <span class="breadcrumbs-separator">/</span>
+                <a class="breadcrumbs-node" href="/blog/">Blog</a>
+            </nav>
+            
+            <p class="blog-article-meta"><span class="tag tag-frame">boss-revolution</span></p>
+            
+        </header>
+        <article class="blog-article-content flex-grow-xs">
+            <h1 id="content-snippets-for-bossdtc">Content Snippets for BOSSDTC</h1>
+<nav class="row">
+    <p class="col-xxs-shrink" style="min-width: 260px">
+        <a href="#homepage"><strong>Homepage</strong></a><br>        <a href="#feature-banners-three-promo-">Feature banners (three promo)</a><br>        <a href="#homepage-slider">Homepage slider</a>
+    </p>
+    <p class="col-xxs-shrink" style="min-width: 260px">
+        <a href="#banners-on-inner-pages"><strong>Banners on inner pages</strong></a><br>        <a href="#international-mobile-top-up">International Mobile Top Up</a><br>        <a href="#imtu-country-pages">IMTU Country pages</a><br>        <a href="#my-account">My Account</a>
+    </p>
+    <p class="col-xxs-shrink" style="min-width: 260px">
+        <a href="#services-icons-and-svg">Services Icons and SVG</a><br>        <a href="#benefits-block">Benefits block</a><br>        <a href="#how-it-works-block">How It Works block</a><br>        <a href="#disclaimers-above-the-footer">Disclaimers above the footer</a>
+    </p>
+    <p class="col-xxs-shrink" style="min-width: 260px">
+        <a href="#alignment-classes">Alignment classes</a><br>        <a href="#transformation-classes">Transformation classes</a><br>    </p>
+</nav>
+
+<h2 id="homepage">Homepage</h2>
+<h3 id="feature-banners-three-promo-">Feature banners (three promo)</h3>
+<div class="row row-between-xxs">
+    <div class="col-xxs-shrink">
+        <p>
+            <img src="https://habrastorage.org/files/e95/7f1/efa/e957f1efa13947b6b101e92882c59a2a.png" alt="">
+        </p>
+    </div>
+    <div class="col-xxs-shrink col-xlg-4">
+        <div class="row">
+            <div class="col-xxs-shrink">
+                
+    <a href="https://idt.invisionapp.com/d/main#/boards/1649362" target="_blank" class="card card-size text-center card-border col-flex-xxs boss-revolution deliverables styleguide design col-flex-sm">
+        <header class="card-header">
+    <span class="tag">[deprecated]</span>
+</header>
+<article class="card-block flex-grow-sm col-flex-sm">
+    <img src="/img/50510686.png" alt="Homepage Feature Banner" class="card-img">
+    <h3 class="card-title">Feature Banners</h3>
+    <p class="card-text">Specs, preview, downloads</p>
+</article>
+
+    </a>
+
+
+            </div>
+            <div class="col-xxs-shrink">
+                
+    <a href="https://idt.invisionapp.com/d/main#/boards/1908811" target="_blank" class="card card-size text-center card-border col-flex-xxs boss-revolution deliverables styleguide col-flex-sm">
+        <header class="card-header">
+    <span class="tag">[deprecated]</span>
+</header>
+<article class="card-block flex-grow-sm col-flex-sm">
+    <img src="/img/58258049.png" alt="" class="card-img">
+    <h3 class="card-title">Homepage Graphics</h3>
+    <p class="card-text">Variations for every locale</p>
+</article>
+
+    </a>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>Zone: <code>home_index_header</code></p>
+<pre class="highlight"><code class="hljs xml">...
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"layout--secondary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"banner"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/en-us/my-account/international-calling/recharge"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>Cheap International Calling: Unlimited calls to Mexico cell or landline<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+                    <span class="hljs-attribute">media</span>=<span class="hljs-value">"(max-width:767px)"</span>
+                    <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/homepage-header-banners/hpb_US-ENG_int-money-transf-special-offer_small_2.png"</span>
+                &gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span>
+                    <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/homepage-header-banners/hpb_US-ENG_int-money-transf-special-offer_2.png"</span>
+                    <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Cheap International Calling: Unlimited calls to Mexico cell or landline"</span>
+                &gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"banner"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/en-us/services/money-transfer"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>International Money Transfer: First Transaction FREE (up to $300). Fees as low as $1.99<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+                    <span class="hljs-attribute">media</span>=<span class="hljs-value">"(max-width:767px)"</span>
+                    <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/homepage-header-banners/hpb_US-ENG_int-money-transf-first-transaction-free_small.png"</span>
+                &gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span>
+                    <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/homepage-header-banners/hpb_US-ENG_int-money-transf-first-transaction-free.png"</span>
+                    <span class="hljs-attribute">alt</span>=<span class="hljs-value">"International Money Transfer: First Transaction FREE (up to $300). Fees as low as $1.99"</span>
+                &gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"banner"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/en-us/services/international-mobile-topup"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+                    <span class="hljs-attribute">media</span>=<span class="hljs-value">"(max-width:767px)"</span>
+                    <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/homepage-header-banners/hpb_US-ENG_imtu-more-than-150_small.png"</span>
+                &gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span>
+                    <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/homepage-header-banners/hpb_US-ENG_imtu-more-than-150.png"</span>
+                    <span class="hljs-attribute">alt</span>=<span class="hljs-value">"International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"</span>
+                &gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+...
+</code></pre>
+<p>Checklist:</p>
+<ol>
+<li>First banner placed inside <code>h1</code> tag, other inside <code>h3</code>.</li>
+<li>Don&#39;t forget to update <code>alt</code> text and screen readers text ( <code>.sr-only</code> ). It&#39;s important for SEO.</li>
+</ol>
+<h3 id="homepage-slider">Homepage slider</h3>
+<p><img src="https://habrastorage.org/files/283/162/89e/28316289ef484582a309926e5a5d80e6.png" alt=""></p>
+<p>Zone: <code>home_index_content</code>. Often need to add new carousel-indicator and new carousel-item (make it <code>.active</code>)</p>
+<p>There is example with two slides:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">ol</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-indicators"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-slide-to</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">data-target</span>=<span class="hljs-value">"#promotions-main"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"active"</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-slide-to</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">data-target</span>=<span class="hljs-value">"#promotions-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-inner"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item text-center active"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hidden-xs"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/en-us/services/unlimited-international-calling-plan"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"BOGO Unlimited Plan offer"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/banners/pinless_promo/BR_Pinless_Unlimited_Bogo_Mexico_FInalArts_Banner1140x300_Eng.jpg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"visible-xs"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/en-us/services/unlimited-international-calling-plan"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"BOGO Unlimited Plan offer"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/banners/pinless_promo/BR_Pinless_Unlimited_Bogo_Mexico_FInalArts_Banner480x320_Eng.jpg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item text-center"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hidden-xs"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/en-us/services/money-transfer"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Your first online money transfer is FREE!"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/banners/mt-FirstFreeTxn/BR-MoneyTransfer-FirstFreeTxn-BannersBanner1140x300_Eng.jpg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"visible-xs"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/en-us/services/money-transfer"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Your first online money transfer is FREE!"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/banners/mt-FirstFreeTxn/BR-MoneyTransfer-FirstFreeTxn-BannersBanner480x320_Eng.jpg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>To add new slide:</p>
+<ol>
+<li>Add <code>div.item</code> inside <code>.carousel-inner</code> — this is slider content.</li>
+<li>Add <code>&lt;li data-slide-to=&quot;1&quot; data-target=&quot;#promotions-main&quot;&gt;&lt;/li&gt;</code> inside <code>.carousel-indicators</code> and increment attribute <code>data-slide-to=&quot;1&quot;</code> — this is navigation circle.</li>
+</ol>
+<p>Checklist:</p>
+<ol>
+<li>Number of navigation circles must be equal to number of slides</li>
+<li>Each banner has two sizes —  small (480x320px) and regular (1140x300px): small should be inside class <code>.visible-xs</code> — for mobile, regular inside class <code>.hidden-xs</code> — tablet and desktop.</li>
+<li>Don&#39;t forget to update <code>alt</code> text for banners for better SEO.</li>
+</ol>
+<h2 id="banners-on-inner-pages">Banners on inner pages</h2>
+<h3 id="international-mobile-top-up">International Mobile Top Up</h3>
+<p>In zone <code>services_imtu_promo_a</code>:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"island visible-xs visible-sm"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"overflow:hidden"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+            <span class="hljs-attribute">media</span>=<span class="hljs-value">"(max-width:375px)"</span>
+            <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"</span>
+        &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span>
+            <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_600x158_Eng.png"</span>
+            <span class="hljs-attribute">alt</span>=<span class="hljs-value">"International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"</span>
+            <span class="hljs-attribute">style</span>=<span class="hljs-value">"width:100%"</span>
+        &gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
+</code></pre>
+<p>In zone <code>services_imtu_promo_b</code>:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">img</span>
+    <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"</span>
+    <span class="hljs-attribute">style</span>=<span class="hljs-value">"width:100%; border-radius:4px;"</span>
+    <span class="hljs-attribute">alt</span>=<span class="hljs-value">"International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"</span>
+&gt;</span>
+</code></pre>
+<h3 id="imtu-country-pages">IMTU Country pages</h3>
+<p>Zone <code>global_mtu</code>:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"margin-bottom:20px;"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+            <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span>
+            <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"</span>
+        &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+            <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:375px)"</span>
+            <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_600x158_Eng.png"</span>
+        &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span>
+            <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"</span>
+            <span class="hljs-attribute">alt</span>=<span class="hljs-value">"International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"</span>
+            <span class="hljs-attribute">style</span>=<span class="hljs-value">"width:100%; border-radius:4px;"</span>
+        &gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h3 id="my-account">My Account</h3>
+<p><img src="https://habrastorage.org/files/18c/5b3/79c/18c5b379ccb146b0a06da22e4f5ac283.png" alt=""></p>
+<p>Zone <code>account_index_toprightpanel</code>:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+        <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:1200px)"</span>
+        <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_600x158_Eng.png"</span>
+    &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+        <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span>
+        <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"</span>
+    &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+        <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:375px)"</span>
+        <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_600x158_Eng.png"</span>
+    &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span>
+        <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"</span>
+        <span class="hljs-attribute">alt</span>=<span class="hljs-value">"International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"</span>
+        <span class="hljs-attribute">style</span>=<span class="hljs-value">"width:100%; border-radius:4px;"</span>
+    &gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+</code></pre>
+<p>Zone <code>account_index_mtutab</code>:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span>&gt;</span><span class="css">
+    <span class="hljs-class">.b_MtuDmtuIndex</span> <span class="hljs-class">.imtu-only</span> <span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> none</span></span>;
+    <span class="hljs-rule">}</span></span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"imtu-only"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">picture</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+            <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:992px)"</span>
+            <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"</span>
+        &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">source</span>
+            <span class="hljs-attribute">media</span>=<span class="hljs-value">"(min-width:375px)"</span>
+            <span class="hljs-attribute">srcset</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_600x158_Eng.png"</span>
+        &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span>
+            <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/banners/mtu/IMTU_150-operators-in-90-countries_320x158_Eng.png"</span>
+            <span class="hljs-attribute">alt</span>=<span class="hljs-value">"International Mobile Top Up: More than 150 Mobile Top Up Operators in Over 90 Countries"</span>
+            <span class="hljs-attribute">style</span>=<span class="hljs-value">"width:100%; border-radius:4px;"</span>
+        &gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">picture</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h2 id="services-icons-and-svg">Services Icons and SVG</h2>
+<p><img src="https://habrastorage.org/files/f4b/2b2/a26/f4b2b2a263d64248bf658d748c04d99c.png" alt=""></p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"plate plate-default-inset plate-large"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"i i--inter-calling"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#i--inter-calling"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p><a href="http://idtdesign.github.io/idtfrontend/docs/icons.html">More docs for icons</a></p>
+<h2 id="benefits-block">Benefits block</h2>
+<p><img src="https://habrastorage.org/files/cbc/cfc/7f0/cbccfc7f08b2453d861b850eb22cdbc0.png" alt=""></p>
+<p>In zones: <code>services_moneytransfer_features</code>, <code>services_internationalcalling_benefits</code>, <code>services_domesticairtimetopup_benefits</code></p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"benefits"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"island island-default"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"island--title"</span>&gt;</span>Benefits<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"benefits benefits-type-services"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"benefits--block"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Flexibility and Ease<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Our delivery options, payment options and customer support are designed to meet your needs here and your family's needs abroad.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"plate plate-default-inset-revert"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"i i--valid"</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#i--valid"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"benefits--block"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Great Rates<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Our service features low transfer fees and competitive exchange rates.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"plate plate-default-inset-revert"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"i i--valid"</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#i--valid"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"benefits--block"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Simple, Safe, Secure<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Send money to friends and family with confidence.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"plate plate-default-inset-revert"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"i i--valid"</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"#i--valid"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
+</code></pre>
+<h2 id="how-it-works-block">How It Works block</h2>
+<p><img src="https://habrastorage.org/files/26f/ce5/50b/26fce550befa42be9aa06ad9c5af45b8.png" alt=""></p>
+<p>In zones: <code>services_domesticairtimetopup_how</code>, <code>services_unlimitedplan_how</code>, <code>services_egift_how_it_works</code></p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"how-works"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"how-works--block"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Enter your one's phone number"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/services/how-it-works-07.png"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Choose your Carrier<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"how-works--block"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Confirm the Carrier"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/services/how-it-works-09.png"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Enter the U.S. Mobile Number You’d Like to Recharge<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"how-works--block"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Choose an Amount"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/Content/img/services/how-it-works-03.png"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Choose an Amount<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h2 id="disclaimers-above-the-footer">Disclaimers above the footer</h2>
+<p><img src="https://habrastorage.org/files/61c/b77/f61/61cb77f6141149208e8aa6434121a096.png" alt=""></p>
+<p>Add <code>class=&quot;notice&quot;</code>.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"notice"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>Note:<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span> Advertised minutes based on single, non-payphone call from the United States to a landline phone in the chosen country destination using local access. Advertised rates are based on calls from the United States to a landline phone in the chosen country destination using local access. Rates shown are live rates and are subject to change without notice (except where an expiration date is provided). Listed destinations are for landlines except where noted.
+    <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>Important:<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span> when calling from a cell phone DO NOT PRESS "SEND" after entering the destination number as this might result in additional charges from your wireless provider. Your wireless carrier may assess roaming or long distance charges when calling a local access number - please check the details of your plan with your provider.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> Boss Revolution Unlimited Plans Stand Alone Terms: <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/en-us/unlimited-plans-terms"</span>&gt;</span>www.bossrevolution.com/unlimited-plans-terms<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h2 id="alignment-classes">Alignment classes</h2>
+<p>Can be used on block-level elements: <code>p</code>, <code>div</code>, <code>h1</code>.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-left"</span>&gt;</span>Left aligned text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-center"</span>&gt;</span>Center aligned text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>Right aligned text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-justify"</span>&gt;</span>Justified text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-nowrap"</span>&gt;</span>No wrap text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+<h2 id="transformation-classes">Transformation classes</h2>
+<p>Can be used on any elements: <code>p</code>, <code>div</code>, <code>h1</code>, <code>a</code>, <code>span</code>.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-lowercase"</span>&gt;</span>Lowercased text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-uppercase"</span>&gt;</span>Uppercased text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-capitalize"</span>&gt;</span>Capitalized text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+<p class="text-muted">An older version of this manual available on <a href="http://codepen.io/paulradzkov/full/WxjrPo/">http://codepen.io/paulradzkov/full/WxjrPo/</a></p>
+        </article>
+        
+        <footer class="blog-article-footer">
+            <p>Paul Radzkov on <time datetime="Fri Oct 28 2016 00:00:00 GMT+0700 (Indochina Time)">28 October 2016</time></p>
+        </footer>
+        
+        <footer class="sitefooter sitefooter-article container-fluid">
+            <div class="row row-middle-xxs">
+                <div class="col-xxs-shrink"><img src="https://avatars1.githubusercontent.com/u/7560415?v=3&s=48" width="24" alt="IDT design logo"></div>
+                <div class="col-xxs-shrink">© 2016 IDT Corp</div>
+                <div class="col-xxs-shrink"><a href="https://github.com/IDTdesign">IDT design on GitHub</a></div>
+            </div>
+        </footer>
+    </main>
+    
+</body>
+</html>

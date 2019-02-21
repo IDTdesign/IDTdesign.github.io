@@ -1,0 +1,103 @@
+.filters-settings() {
+    @color-default: #222;
+    @color-accent: #e21b23;
+    @color-inversed: #fff;
+    @color-subtle: #ccc;
+    @bg-default: transparent;
+    @bg-accent: @color-accent;
+    @v-size: .5em;
+    @h-size: 1.25em;
+    @h-shift: .5em;
+    @fz-base: 14px;
+    @fz-title: 12px;
+    @lh: 1.5;
+    @bdrs: (@lh * 1em);
+    @border-width: 2px;
+    @border-button: @border-width solid @bg-default;
+    @active-shadow: 2px 5px 20px -5px fade((@color-accent + #000), 80%);
+    @focus-shadow: 0 0 0 3px rgba(0, 165, 255, 0.4);
+}
+
+.filterstitle-textstyle() {
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+/* ---- ui group ---- */
+
+.filter-ui-group {
+    margin-top: @v-size;
+    margin-bottom: @v-size;
+
+    &-title {
+        margin: 0 0 @v-size;
+        font-size: @fz-title;
+        .filterstitle-textstyle();
+        color: @color-subtle;
+    }
+
+    .filters-settings();
+}
+
+/* ---- button ---- */
+
+.filter-button {
+    display: inline-block;
+    margin: 0;
+    padding: @v-size @h-size;
+    border: @border-button;
+    border-radius: @bdrs;
+    color: @color-default;
+    background: @bg-default;
+    font-size: @fz-base;
+    line-height: @lh;
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        color: @color-accent;
+    }
+
+    &:active,
+    &.is-checked {
+        color: @color-inversed;
+        background-color: @bg-accent;
+    }
+
+    &.is-checked {
+        color: @color-inversed;
+        border-color: darken(@color-accent, 5%);
+        box-shadow: @active-shadow;
+
+        &:focus {
+            box-shadow:
+                @focus-shadow,
+                @active-shadow;
+        }
+    }
+
+    .filters-settings();
+}
+
+/* ---- button-group ---- */
+
+.filter-button-group {
+    border-radius: @bdrs;
+    box-shadow: inset 0 0 0 @border-width @color-subtle;
+    padding-right: @h-shift;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .filter-button {
+        float: left;
+        margin-right: -(@h-shift);
+    }
+
+    .filters-settings();
+}
